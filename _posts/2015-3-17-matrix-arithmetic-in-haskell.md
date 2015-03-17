@@ -8,6 +8,7 @@ tags: Haskell
 虽然到现在的我都没把趣学指南看完因为课有点多~~事实上是太懒了~~, 只看到了State Monad这里吧, 还不是太懂, 一旦碰到「作为Monad值的函数」,「作为Applicate值的函数」这种东西我就抓瞎了.
 
 说回矩阵吧, 用Haskell写这个还是挺爽的, 相较于C来说:
+
 * 不用和各种数组下标打交道
 * 经常编译不过, 但一旦通过编译, 往往就得到正确的结果了
 * 函数出乎意料地短, 数乘和矩阵加减本来都是用递归实现的, 写完后发现原来分别可以用map和zipWith来替代, 一下子长度就缩短了一半不止
@@ -30,6 +31,7 @@ transpose (Matrix ys) = map head ys : transpose (Matrix $ map tail ys)
 看来理解还是有偏差的.
 
 下面的代码分别实现了:
+
 * 矩阵加法 plus
 * 矩阵减法 sub
 * 矩阵数乘 smul
@@ -53,7 +55,7 @@ plus ::  Matrix -> Matrix -> Matrix
 Matrix xs `plus` Matrix ys = Matrix $ zipWith (zipWith (+)) xs ys
 
 sub :: Matrix -> Matrix -> Matrix
-Matrix (x:xs) `sub` Matrix (y:ys) = Matrix $ zipWith (zipWith (-)) xs ys
+Matrix xs `sub` Matrix ys = Matrix $ zipWith (zipWith (-)) xs ys
 
 transpose :: Matrix -> Matrix
 transpose (Matrix ([]:_)) = Matrix []
