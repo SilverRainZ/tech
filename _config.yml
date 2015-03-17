@@ -1,0 +1,7 @@
+baseurl: /
+paginate: 6 
+paginate_path: "page:num"
+encoding: utf-8
+markdown: rdiscount
+#markdown: redcarpet
+#permalink: /404.html 

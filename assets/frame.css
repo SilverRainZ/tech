@@ -1,0 +1,143 @@
+html { 
+    height: 100%;
+    background-attachment: fixed;
+    background-image: url("background.jpg");
+    background-color: #222;
+    background-position: center center;
+}
+
+body {
+    background: url("line.png") repeat fixed -42px top transparent;
+    color: #888;
+    font: 12px/200% "Hiragino Sans GB","Consolas","Microsoft YaHei","微软雅黑","arial";
+    padding: 0px;
+    margin: 0px;
+}
+/* 普通链接样式 */
+a {
+    color: #DDD;
+    text-decoration: none;
+    transition: all 0.3s ease 0s; 
+} 
+a:hover {
+    color: #FFF;
+    text-decoration: none;
+    transition: all 0.3s ease 0s; 
+} 
+/* 侧边栏 */
+.sidebar {
+    color: #DDD;
+    left: 40px;
+    position: fixed;
+    top: 40px;
+    width: 150px;
+}
+.sidebar ul {
+    padding: 0px;
+}
+.sidebar li {
+    list-style: none;
+    padding: 6px 0px;
+}
+.sidebar img {
+    border-radius: 50%;
+    transition: all 0.3s ease 0s; 
+}
+.sidebar img:hover {
+    opacity: 0.8;
+    transition: all 0.3s ease 0s; 
+}
+/* 主体 */
+.postlist {
+    padding: 40px 0px;
+    margin: 0px auto;
+    width: 500px;
+}
+.post {
+    background: none repeat scroll 0% 0% rgba(21, 21, 21, 0.8);
+    border-radius: 3px;
+    margin-bottom: 40px;
+}
+.posttitie {
+    font-size: 20px;
+}
+.posttext {
+    padding: 26px 20px 0px;
+}
+/* 文章页脚 */
+.postfooter {
+    border-radius: 3px;
+    background: none repeat scroll 0% 0% rgba(21, 21, 21, 0.8);
+    height: 40px;
+}
+/* 日期 */
+.postdate {
+    display: inline;
+    padding-left: 25px;
+    line-height: 40px;
+    padding: 0px 20px;
+}
+.postdate a{
+    background: url("icon.png") no-repeat scroll 0px 0px transparent;
+    background-position: 0px 14px;
+    color: #666;
+    padding: 0px 20px;
+    height: 40px;
+    display: inline-block;
+}
+.postdate a:hover{
+    color: #AAA;
+    background-position: 0px -93px;
+    display: inline-block;
+}
+/* 翻页 */
+.switchpage {
+    height: 40px;
+    text-align: right;
+    line-height: 32px;
+}
+.switchpage a{
+    color: #666;
+    display: inline-block;
+    line-height: 32px;
+    height: 32px;
+    margin: 4px 6px 4px 6px;
+    padding: 0px 6px 0px 6px;
+    border-radius: 1px;
+}
+.switchpage a:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #DDD;
+}
+/* 主体结束 */
+/* 页脚 */
+.footer {
+    background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.8);
+    color: #666;
+    position: fixed;
+    bottom: 0px;
+    line-height: 40px;
+    text-align: center;
+    width: 100%;
+}
+.footer a {
+    color: #666;
+}
+.footer a:hover{
+    color: #AAA;
+}
+/* 对markdown效果的增强*/
+code {
+    background: none repeat scroll 0% 0% rgba(20, 20, 20, 0.8);
+    border-radius: 2px;
+    font: 12px/200% "Consolas","Hiragino Sans GB","Microsoft YaHei","微软雅黑","arial";
+    margin: 4px;
+    padding: 4px;
+    overflow: auto;
+    overflow-y: hidden;
+}
+blockquote {
+    border-left: 5px solid #AAA;
+    margin: 0px;
+    padding-left: 1.5em;
+}

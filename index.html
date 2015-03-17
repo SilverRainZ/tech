@@ -1,0 +1,36 @@
+---
+title: LastAvengers
+layout: default
+---
+{% for post in paginator.posts %}
+<div class="post">
+    <div class="posttext">
+        <div class="posttitie">
+            <a href="{{ post.url }}">{{ post.title }}</a><hr>
+        </div>
+        <p> {{ post.excerpt | strip_html }} </p>
+    </div>
+    <div class="postfooter">
+        <div class="postdate">
+            <a href="">{{ post.date | date_to_string }}</a> 
+        </div>
+    </div>
+</div>
+{% endfor %}
+<!-- 分页器 -->
+<div class="switchpage">
+    {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+    <a href="../">◣ 上 • 一页</a>
+    {% else %}
+    <a href="/page{{ paginator.previous_page }}">◣ 上 • 一页</a>
+    {% endif %}
+    {% else %}
+    <a>◣ 上 • 尽头</a>
+    {% endif %}
+    {% if paginator.next_page %}
+    <a href="/page{{ paginator.next_page }}">下 • 一页 ◢ </a>
+    {% else %}
+    <a>下 • 尽头 ◢ </a>
+    {% endif %}
+</div>

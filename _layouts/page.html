@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<link type="text/css" rel="stylesheet" href="{{ site.baseurl }}assets/cover.css">
+
+<div class="post">
+    <div class="posttext">
+        <div class="posttitie">
+            <a href="{{ page.url }}">{{ page.title }}</a>
+            <hr>
+        </div>
+        {{ content | markdownify }}
+    </div>
+    {% include duoshuo.html %}
+    <div class="postfooter"></div>
+</div>

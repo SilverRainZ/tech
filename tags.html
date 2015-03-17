@@ -1,0 +1,32 @@
+---
+title: Tags 
+layout: default
+---
+<div class="posttext" style="margin-bottom: 20px;">
+    <div class="posttitie">
+        <a href="{{ page.url }}">标签</a><hr>
+    </div>
+    {% for tag in site.tags %}
+    <a href="#{{ tag[0] }}" 
+        title="{{ tag[0] }}" 
+        style="font-size: {{ tag[1].size | divided_by:5 | times:20 | plus:100 }}%;"
+        >{{ tag[0] }}({{ tag[1].size }})</a>
+    {% endfor %}
+</div>
+
+<div class="post">
+    <div class="posttext">
+    {% for tag in site.tags %}
+        <blockquote id="{{ tag[0] }}">{{ tag[0] }}</blockquote>
+        <ul>
+            {% for post in tag[1] %}
+            <li>
+            <time datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string}}</time>
+            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+    </div>
+    <div class="postfooter"></div>
+</div>

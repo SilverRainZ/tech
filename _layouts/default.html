@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<!-- 外部样式 -->
+<link type="text/css" rel="stylesheet" href="{{ site.baseurl }}assets/frame.css">
+
+<link rel="shortcut icon" href="{{ site.baseurl }}assets/avatar_small.jpg">
+<title>{{ page.title }} | LA </title>
+</head>
+<body>
+<!-- 侧边栏 -->
+<div class="sidebar">
+    <a href="{{ site.baseurl }}">
+        <img width="80" height="80" style="border-radius: 50%" src="{{ site.baseurl }}assets/avatar_big.jpg">
+    </a>
+    <h2><a href="{{ site.baseurl }}">谷月轩</a></h2>
+    <p>失敗した.</p>
+    <ul>
+        <li><a href="{{ site.baseurl }}">时间线</a></li>
+        <li><a href="{{ site.baseurl }}archive.html">归档</a></li>
+        <li><a href="{{ site.baseurl }}tags.html">标签</a></li>
+        <li><a href="{{ site.baseurl }}links.html">链接</a></li>
+        <li><a href="{{ site.baseurl }}about.html">关于</a></li>
+    </ul>
+</div>
+<!-- 侧边栏结束 -->
+<!-- 主体 -->
+<div class="postlist">
+    {{ content }}
+</div>
+<!-- 主体结束 -->
+</body>
+<!-- 页脚 -->
+<div class="footer">
+    © <a href="https://github.com/LastAvenger">LastAvengers</a> | Powered by <a href="http://jekyllrb.com/">Jekyll</a>
+</div>
+<!-- 页脚结束 -->
+</html>
