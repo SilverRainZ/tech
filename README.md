@@ -4,5 +4,5 @@ LastAvenger.github.io
 
 想要使用此模板? Fork it.
 
-在使用此模板是请勿保留`_post`下的所有文件. 
+在使用此模板时请勿保留`_post`下的所有文件. 
 
