@@ -1,7 +1,11 @@
 /* 对frame.css 样式的覆盖 */
+.posttitle {
+    font-size: 25px;
+}
 .postlist {
     width: 630px;
     color:#BBB;
+    font-size: 13px;
 }
 .switchpage {
     float: right;

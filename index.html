@@ -5,7 +5,7 @@ layout: default
 {% for post in paginator.posts %}
 <div class="post">
     <div class="posttext">
-        <div class="posttitie">
+        <div class="posttitle">
             <a href="{{ post.url }}">{{ post.title }}</a><hr>
         </div>
         <p> {{ post.excerpt | strip_html }} </p>
