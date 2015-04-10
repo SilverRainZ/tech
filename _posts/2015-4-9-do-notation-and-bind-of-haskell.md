@@ -51,10 +51,8 @@ test = do
 
 结果应该是：
 
-```haskell
-ghci> runState test []
-(5,[4,3])
-```
+> ghci> runState test [] <br>
+> (5,[4,3])
 
 怎么用`>>=`改写上面的do notation呢？
 
@@ -79,10 +77,8 @@ test' :: State Stack Int
 test' = push 3 >>= (\_ -> push 4) >>= （\_ -> push 5） >>= (\_ -> pop)
 ```
 
-```haskell
-ghci> runState test' []
-(5,[4,3])
-```
+> ghci> runState test' [] <br>
+> (5,[4,3])
 
 最后，书里的`>>=` 实现是这样子的：
 
