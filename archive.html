@@ -8,9 +8,7 @@ layout: default
     </div>
     <ul>
         {% for post in site.posts %}
-        {% capture ym %}
-        {{ post.date | date:"%Y 年 %m 月" }}
-        {% endcapture %}
+        {% capture ym %}{{ post.date | date:"%Y 年 %m 月" }}{% endcapture %}
         {% if yearmonth != ym %}
         {% assign yearmonth = ym %}
         <li><a href="#{{ ym }}">{{ ym }}</a></li>

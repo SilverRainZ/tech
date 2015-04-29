@@ -11,7 +11,7 @@
 /* 隐藏喜欢 */
 .ds-post-likes{display:none;}
 /* 隐藏版权声明 */
-#ds-thread #ds-reset .ds-powered-by{display:none;}
+/*#ds-thread #ds-reset .ds-powered-by{display:none;}*/
 /* 隐藏浮动窗口图标 */
 #ds-wrapper #ds-reset .ds-dialog-footer {display:none;}
 
