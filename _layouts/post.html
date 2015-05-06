@@ -14,8 +14,8 @@ layout: default
             <hr>
         </div>
         {{ content }}
+        {% include disqus.html %}
     </div>
-    {% include duoshuo.html %}
     <div class="postfooter">
         <div class="postdate">
             <a href="">{{ page.date | date_to_string }}</a> 
