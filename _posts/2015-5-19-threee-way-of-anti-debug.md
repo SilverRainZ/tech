@@ -329,7 +329,7 @@ NTSTATUS WINAPI ZwQueryInformationProcess(
 </p>
 
 
-##0x4 NtGlobalFlag, ProcessHeap 和 OutputDebugStringA
+##0x4 NtGlobalFlag,ProcessHeap,OutputDebugStringA
 这几个都比较简单, 从略.
 ###NtGlobalFlag
 
