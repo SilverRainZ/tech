@@ -6,9 +6,12 @@
 <link type="text/css" rel="stylesheet" href="{{ site.baseurl }}assets/frame.css">
 
 <link rel="shortcut icon" href="{{ site.baseurl }}assets/avatar_small.jpg">
+<!-- 有字库 webfont -->
+{% include youziku1.html %}
+
 <title>{{ page.title }} | LA </title>
 </head>
-<body>
+<body id="youziku" >
 <!-- 侧边栏 -->
 <div class="sidebar">
     <a href="{{ site.baseurl }}">
@@ -30,12 +33,14 @@
     {{ content }}
 </div>
 <!-- 主体结束 -->
-</body>
 <!-- 页脚 -->
 <div class="footer">
     © <a href="https://github.com/LastAvenger">LastAvengers</a> | Powered by <a href="http://jekyllrb.com/">Jekyll</a>
 </div>
+</body>
 <!-- 页脚结束 -->
 <!-- gostats 统计 -->
 {% include gostats.html %}
+<!-- 有字库 webfont -->
+{% include youziku2.html %}
 </html>

@@ -9,7 +9,7 @@ html {
 body {
     background: url("line.png") repeat fixed -42px top transparent;
     color: #888;
-    font: 12px/200% "Hiragino Sans GB","Consolas","Microsoft YaHei","微软雅黑","arial";
+    font: 12px/200% "Source-Han-Light","微软雅黑","Microsoft YaHei","arial";
     padding: 0px;
     margin: 0px;
 }
@@ -130,7 +130,7 @@ a:hover {
 code {
     background: none repeat scroll 0% 0% rgba(20, 20, 20, 0.8);
     border-radius: 2px;
-    font: 12px/200% "Consolas","Hiragino Sans GB","Microsoft YaHei","微软雅黑","arial";
+    font: 12px/200% "Consolas","微软雅黑","Microsoft YaHei","arial";
     margin: 4px;
     padding: 4px;
     overflow: auto;
