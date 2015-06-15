@@ -1,5 +1,5 @@
 baseurl: /
-paginate: 6 
+paginate: 10
 paginate_path: "page:num"
 encoding: utf-8
 markdown: rdiscount
