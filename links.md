@@ -1,27 +1,34 @@
 ---
-title: links
+title: 链接
 layout: page
 ---
-这个页面并不单纯是友情链接, 还列举了很多我敬佩的人, 其中大部分是单向链.
+**不是友情链接.**
 
-> [夏殇 | 不忘初心, 方得始终](http://xiashang.sinaapp.com/) 
+####[LAs' LOFTER | 一个恶人](http://lastavengers.lofter.com/)
 
-没有妹子的白总
-> [Special Blog](http://www.specyci.com/) 
+> 相识十九年的旧友, 性格很糟糕, 本来能成为一个画家, 可惜他自己不努力.
 
-Special同学的博客, 对, 就是那个突发奇想的Special!
+####[夏殇 | 不忘初心, 方得始终](http://xiashang.sinaapp.com/) 
 
-> [初心 ~ ](http://fleurer-lee.com/) 
+> 没有妹子的白总
 
-F叔的博客, 人很好.
-> [依云's Blog](http://lilydjwg.is-programmer.com/) 
+####[Special Blog](http://www.specyci.com/) 
 
-Linux百科全书, 依云仙子.
+> Special同学的博客, 对, 就是那个突发奇想的Special!
 
-> [初心を忘れず](https://www.ricter.me/) 
+###[初心~](http://fleurer-lee.com/) 
 
-前阵子勾搭到的Ricter大大.
+> F叔的博客, 人很好.
 
-> [OctoBug | More than codes](http://octobug.github.io/)
+####[依云's Blog](http://lilydjwg.is-programmer.com/) 
 
-同样爱好安全的 bITeMe, 共同进步中, 来咬我啊.
+> Linux百科全书, 依云仙子.
+
+####[初心を忘れず](https://www.ricter.me/) 
+
+> 前阵子勾搭到的Ricter大大.
+
+
+####[OctoBug | More than codes](http://octobug.github.io/)
+
+> 同样爱好安全的 bITeMe, 共同进步中, 来咬我啊.
