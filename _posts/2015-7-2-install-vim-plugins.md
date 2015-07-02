@@ -1,7 +1,7 @@
 ---
 layout: post
 tag: vim linux
-path: /assets/2015-7-2-install-plugins-of-vim
+path: /assets/2015-7-2-install-vim-plugins
 title: VIM 插件折腾记录
 ---
 
