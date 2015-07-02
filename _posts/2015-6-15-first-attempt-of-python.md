@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python初试
+title: Python 初试
 tags: Python
 ---
 

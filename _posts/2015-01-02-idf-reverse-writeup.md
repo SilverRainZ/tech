@@ -1,6 +1,6 @@
 ---
 layout: post
-title: IDF实验室逆向题部分题解 
+title: IDF 实验室逆向题部分题解 
 path: /assets/2015-01-02-idf-reverse-writeup
 tags: 逆向工程
 ---

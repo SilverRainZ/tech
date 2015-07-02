@@ -1,6 +1,6 @@
 ---
 layout: post
-title: do记法和>>=的等效表达
+title: do 记法和 >>= 的等效表达
 tags: Haskell
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 不求甚解者用不好Linux
+title: 不求甚解者用不好 Linux
 tags: 瞎扯 
 ---
 今晚无聊到写这么一篇废话, 很大程度上是想自我批评一下.
