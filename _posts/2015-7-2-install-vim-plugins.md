@@ -26,7 +26,7 @@ export FCITX_SOCKET=/tmp/fcitx-remote.sock
 不过我试了试发现报错: socket connection error, 就不去用它了.
 
 ##Vundle
-神奇, 用来管理插件的插件, 可以从 GitHub, 其他 Git 服务器或者本地的 Git 目录获取并安装插件, 把 [gmarik/Vundle.vim](https://github.com/gmarik/Vundle.vim) clone 到 `.vim` 下, 在 `.vimrc` 里添加如下内容:
+神器, 用来管理插件的插件, 可以从 GitHub, 其他 Git 服务器或者本地的 Git 目录获取并安装插件, 把 [gmarik/Vundle.vim](https://github.com/gmarik/Vundle.vim) clone 到 `.vim` 下, 在 `.vimrc` 里添加如下内容:
 
 ```vim
 set nocompatible              " be iMproved, required
@@ -62,7 +62,8 @@ filetype plugin indent on    " required
 对于在 GitHub 上的插件地址, 可以直接写 `owner/repo-name` 这样的形式.
 
 ##PowerLine
-一个漂亮的状态栏插件, 好好看!  
+漂亮的状态栏插件
+
 在`.vimrc` 相应位置里加一句 `Plugin 'Lokaltog/vim-powerline'`, 再 `:PluginInstall`, 加上如下配置:
 
 ```vim
