@@ -4,18 +4,18 @@ title: Arch Linux 折腾小记
 path: /assets/2015-7-20-configure-of-archlinux
 tags: Linux
 ---
-这几天一直在折腾 Arch Linux 上的桌面,弄到今天终于差不多了.
+这几天一直在折腾 Arch Linux 上的桌面, 弄到今天终于差不多了.
 先上张图:
-![1]({{ page.path }}/1.png)
+<img src="{{ page.path }}/1.png" width=100%>
 
 ##以 XMonad 为 WM 的桌面
 没有用 DE, WM 用的是 XMonad.
 
-关于 XMonad 的默认快捷键,[XMonad Guide Tour](http://xmonad.org/tour.html) 这篇官方的这篇文档很容易看懂.
+关于 XMonad 的默认快捷键, [XMonad Guide Tour](http://xmonad.org/tour.html) 这篇官方的这篇文档很容易看懂.
 
 需要安装的包如下:
 
-```shell
+```bash
 ➜  pacman -S    \
 xmonad          \   
 xmonad-contrib  \
@@ -26,23 +26,23 @@ feh             \
 scrot           
 ```
 
-xmobar, 配置文件在`.xmobarrc`, 是个基于文字的状态栏, 可以显示从 stdin 接收到的内容, 也可以自己获取系统信息,我这里的中文显示还有问题, 部分中文乱码,应该是字体的锅.
+xmobar, 配置文件在`.xmobarrc`, 是个基于文字的状态栏, 可以显示从 stdin 接收到的内容, 也可以自己获取系统信息, 我这里的中文显示还有问题, 部分中文乱码, 应该是字体的锅.
 
-dmenu 是个启动器,功能比较简单,所以不需要什么特殊的配置,在 XMonad 里按`mod + q`触发.
+dmenu 是个启动器, 功能比较简单, 所以不需要什么特殊的配置, 在 XMonad 里按`mod + q`触发.
 
-trayer 是个系统托盘,用来容纳各种图标,启动选项如下:
+trayer 是个系统托盘, 用来容纳各种图标, 启动选项如下:
 
-```shell
+```bash
 trayer --edge top --align right --widthtype percent --width 11 \
        --SetDockType true --SetPartialStrut true --transparent true --alpha 0 \
        --tint 0x000000 --expand true --heighttype pixel --height 17
 ```
 
-本来已经设置了 xmobar 占据屏幕的 90%,而 trayer 占 10%,不过这样仍然会在屏幕上留下间隙,所以这里设置成占据屏幕的 11%.
+本来已经设置了 xmobar 占据屏幕的 90%, 而 trayer 占 10%, 不过这样仍然会在屏幕上留下间隙, 所以这里设置成占据屏幕的 11%.
 
-feh 用来设置桌面背景,设置背景很有必要,如果不设置的话,关闭窗口的时候不会有明显的反馈,浮动窗口也会留下难看的拖影.
+feh 用来设置桌面背景, 设置背景很有必要, 如果不设置的话, 关闭窗口的时候不会有明显的反馈, 浮动窗口也会留下难看的拖影.
 
-```shell
+```bash
 feh --bg-scale /home/la/Pictures/Wallpapers/blog-bg.jpg
 ```
 
@@ -58,22 +58,22 @@ defaultConfig
 ]
 ```
 
-`-s`参数可以让你自己选择截图的区域,不过这个工具竟然没法指定图片的存放位置,只能在截图后用`-e 'mv $f ~/Pictures/Screenshots'`把截图放到指定目录.
+`-s`参数可以让你自己选择截图的区域, 不过这个工具竟然没法指定图片的存放位置, 只能在截图后用`-e 'mv $f ~/Pictures/Screenshots'`把截图放到指定目录.
 
-上面这些配置大多写在启动脚本`startup.sh`里,每个命令后边都得加上一个`&`.
+上面这些配置大多写在启动脚本`startup.sh`里, 每个命令后边都得加上一个`&`.
 
 ##无线网络管理
 
-为了更方便地连接无线网络,安装如下包:
+为了更方便地连接无线网络, 安装如下包:
 
-```shell
+```bash
 ➜  pacman -S            \
 networkmanager          \
 network-manager-applet  \
 gnome-keyring   
 ```
 
-注意如果你之前连接无线网络用的是`netctl`的话,记得把有关的服务给 disable 了, 因为 networkmanager 和他有冲突, 安装完后执行 NetworkManager 启动服务.
+注意如果你之前连接无线网络用的是`netctl`的话, 记得把有关的服务给 disable 了, 因为 networkmanager 和他有冲突, 安装完后执行 NetworkManager 启动服务.
 
 network-manager-applet 是 networkmanager 的前端.
 
@@ -81,26 +81,26 @@ network-manager-applet 是 networkmanager 的前端.
 
 ##IM
 ###QQ
-TM2013 可能是运行在 Wine 上表现最好的一个版本了,我下载了 [邓攀打包的TM2013](http://www.zhihu.com/question/23770274/answer/45703773), 似乎没有预期中的 out of box,字体不行,密码输入也不行. 不过根据错误提示和 Arch Linux Wiki,装了几个包就解决问题了.
+TM2013 可能是运行在 Wine 上表现最好的一个版本了, 我下载了 [邓攀打包的TM2013](http://www.zhihu.com/question/23770274/answer/45703773), 似乎没有预期中的 out of box, 字体不行, 密码输入也不行. 不过根据错误提示和 Arch Linux Wiki, 装了几个包就解决问题了.
 
-```shell
+```bash
 ➜  pacman -S lib32-ncurses lib32-mpg123
 ➜  winetrick riched20 ie6 mfc42 cjkfonts wenquanyi
 ```
 
 ###其他
 * IRC 客户端用火狐的 ChatZilla
-* Telegram 客户端用 Cutegram, 得装 `fcitx-qt5` 才能正常输入, 另 TG 似乎已经被墙(手机上却仍然可以登录),Cutegram 无法登录, 挂个代理就行.
+* Telegram 客户端用 Cutegram, 得装 `fcitx-qt5` 才能正常输入, 另 TG 似乎已经被墙(手机上却仍然可以登录), Cutegram 无法登录, 挂个代理就行.
 
 ##GTK
-默认的 gtk 界面在 XMonad 下相当地丑,可以安装`lxappearance`来调整 GTK 的主题.
+默认的 gtk 界面在 XMonad 下相当地丑, 可以安装`lxappearance`来调整 GTK 的主题.
 
 对于 Qt 程序, dolphin 有很好看的外观, 但是同为 kde-applications 的 konsole 的界面却依然很丑... 
 
 ##输入法:
 在`~/.xprofile`中加入:
 
-```shell
+```bash
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
@@ -170,7 +170,7 @@ main = do
 
 ###启动脚本 ~/.xmonad/startup.sh
 
-```shell
+```bash
 #!/usr/bin/sh
 
 # Set wallpaper wit feh
