@@ -97,6 +97,8 @@ TM2013 可能是运行在 Wine 上表现最好的一个版本了, 我下载了 [
 
 对于 Qt 程序, dolphin 有很好看的外观, 但是同为 kde-applications 的 konsole 的界面却依然很丑... 
 
+> 2015-7-24: 经过 IRC 里 fc 前辈和奎宁大大的~~调教~~, 发现原来 dolphin 还是 kde4 而 konsole 已经是 kde5 了.
+
 ##输入法:
 在`~/.xprofile`中加入:
 
