@@ -22,3 +22,6 @@ layout: page
 * [GitHub](https://github.com/LastAvenger)
 * [CnBlog](http://www.cnblogs.com/lastavengers)
 
+协议
+---
+博文内容均以: [CC BY-NC-SA 署名-非商业性使用-相同方式共享](https://creativecommons.org/licenses/by-nc-sa/3.0/cn/legalcode)协议分发.

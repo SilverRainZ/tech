@@ -6,7 +6,7 @@ layout: page
 
 ####[LAs' LOFTER | 一个恶人](http://lastavengers.lofter.com/)
 
-> 相识十九年的旧友, 性格很糟糕, 本来能成为一个画家, 可惜他自己不努力.
+> 一个相识十九年的旧友, 性格很糟糕.
 
 ####[夏殇 | 不忘初心, 方得始终](http://xiashang.sinaapp.com/) 
 

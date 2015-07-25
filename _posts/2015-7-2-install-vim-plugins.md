@@ -1,8 +1,8 @@
 ---
 layout: post
-tag: vim linux
+tags: Vim Linux
 path: /assets/2015-7-2-install-vim-plugins
-title: VIM 插件折腾记录
+title: Vim 插件折腾记录
 ---
 
 今天考完计组, 有一个空闲的下午, 于是决定来配一配 vim, 装了几个插件, 记录如下: 

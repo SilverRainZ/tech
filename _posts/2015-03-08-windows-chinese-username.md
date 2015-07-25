@@ -1,7 +1,7 @@
 ---
 layout: post
 tags: 折腾 Windows
-title: 把Windows中文用户名改为英文
+title: 把 Windows 中文用户名改为英文
 ---
 
 上次暑假回家重装系统,Win 8.1 和 openSUSE 13.2, 在同步Outlook账号的时候, 没注意到当前我的账户名是中文的. 导致了我在`C:\Users\`目录下的用户目录变成了中文的. 本来以为问题不大, 没想到有些程序对中文路径名的支持还是这么差.<br>
