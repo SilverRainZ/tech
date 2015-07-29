@@ -6,10 +6,10 @@ path: /assets/2015-7-26-overthewire-bandit
 ---
 题目地址: [OverTheWire: Bandit](http://overthewire.org/wargames/bandit/).
 
-考的都是些 Linux 下的基本操作, 虽然说是基本操作, 不过那些命令都没用过, 所以做了这些题也是受益匪浅. 其中还有有几道题很有意思...~~有意思的意思是我不会做~~.
+考的都是些 Linux 下的基本操作, 虽然说是基本操作, 不过那些命令都没用过, 所以做了这些题依然觉得受益匪浅. 其中还有有几道题很有意思...~~有意思的意思是我不会做~~.
 
 ##WeChall 计分板
-OverTheWire 使用 Wechall 的来计分, 具体参见 [WeChall Scoreborad](http://overthewire.org/about/wechall.html)
+OverTheWire 使用 Wechall 的计分板来计分, 具体参见 [WeChall Scoreborad](http://overthewire.org/about/wechall.html)
 
 因为题目都在远程的 ssh 主机上, 所以你需要让远程主机知道你是谁.
 在你的 `.bashrc` 里加上两个环境变量:
@@ -64,7 +64,7 @@ ssh -i bandit17.key bandit17@bandit.labs.overthewire.org
 cat /etc/bandit_pass/bandit17
 ```
 
-> key:xLYVMN9WE5zQ5vHacb0sZEVqbrp7nBTn
+> key: xLYVMN9WE5zQ5vHacb0sZEVqbrp7nBTn
 
 
 ###bandit21
@@ -81,6 +81,8 @@ echo GbKksEFF4yrVs6il55v6gwY5aVje5f0j | nc -l -p 1234 & ./suconnect 1234
 ```
 
 这里主要是 `&` 的用法, 使两个命令同时执行.
+
+> key: gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
 
 
 ###bandit24
@@ -133,7 +135,9 @@ chmod 666 /tmp/tmp.xxx/
 
 脚本写完后, `chmod +x`, 再把它复制到 `/var/spool/bandit24` 目录下, 记得备份, 每隔一分钟该目录就会被清空.
 
-比较有意思的是, 你在那个目录下多刷新几次, 有时可以看到别人写的脚本.
+脚本执行后, 到 `/tmp/tmp.xxx` 里就可以看到存有 key 的文件了.
+
+> key: UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
 
 
 #bandit25
@@ -155,9 +159,13 @@ cat /tmp/log | grep "Corr" -n1
 
 其实答案就是最后一个端口...
 
-> 5670-Wrong! Please enter the correct pincode. Try again.
-> 5671:Correct!
+> 5670-Wrong! Please enter the correct pincode. Try again.<br>
+> 5671:Correct!<br>
 > 5672-The password of user bandit25 is uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+
+所以: 
+
+> key: uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
 
 
 #bandit26
@@ -218,3 +226,7 @@ exit 0
 ```
 
 这样就可以执行 `wechall` 拿分了.
+
+> key: 5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+
+
