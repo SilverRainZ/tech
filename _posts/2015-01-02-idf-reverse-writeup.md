@@ -2,7 +2,7 @@
 layout: post
 title: IDF 实验室逆向题部分题解 
 path: /assets/2015-01-02-idf-reverse-writeup
-tags: 逆向工程
+tags: 逆向工程 CTF
 ---
 地址在这里：[IDF逆向题](http://ctf.idf.cn/index.php?g=game&m=list&a=index&id=21)
 这些题都比较水，好在我和它一样水。<br>
