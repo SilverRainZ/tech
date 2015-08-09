@@ -289,8 +289,15 @@ struct inode{
 * `p2i` (path to inode) 解析路径名, 返回指定的未上锁的 i 节点.
 
 ###文件和系统调用
-这一层是最上一层, 文件是对 i 节点的简单封装, 提供了`fread``fwrite``fclose`等函数.
-因为涉及到进程的文件表, 因此这一层暂时没有~~抄~~写.
+这一层是最上一层, 文件是对 i 节点的简单封装, 提供了`fread` `fwrite` `fclose`等函数.
+此处涉及到进程的文件表, 因此这一层暂时没有~~抄~~写.
 
 不过在前面几层的基础上, 实现这一层应该没什么问题.
+
+##参考
+* [《Linux 内核完全注释》](http://book.douban.com/subject/1231236/)
+* [fleurix](https://github.com/Fleurer/fleurix)
+* [Minix File System - Dr.John C.S.Lui](https://koala.cs.pub.ro/redmine/attachments/download/105/minix.pdf)
+* [MIT 6.828 xv6](http://pdos.csail.mit.edu/6.828/2011/xv6.html)
+* [xv6 中文文档](https://github.com/ranxian/xv6-chinese)
 
