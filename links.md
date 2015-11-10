@@ -2,37 +2,12 @@
 title: 链接
 layout: page
 ---
-**不是友情链接.**
 
-####[LAs' LOFTER | 一个恶人](http://lastavengers.lofter.com/)
-
-> 一个相识十九年的旧友, 性格很糟糕.
-
-####[夏殇 | 不忘初心, 方得始终](http://xiashang.sinaapp.com/) 
-
-> 没有妹子的白总
-
-####[Special Blog](http://www.specyci.com/) 
-
-> Special同学的博客, 对, 就是那个突发奇想的Special!
-
-###[初心~](http://fleurer-lee.com/) 
-
-> F叔的博客, 人很好.
-
-####[依云's Blog](http://lilydjwg.is-programmer.com/) 
-
-> Linux百科全书, 依云仙子.
-
-####[初心を忘れず](https://www.ricter.me/) 
-
-> 前阵子勾搭到的Ricter大大.
-
-
-####[OctoBug | More than codes](http://octobug.github.io/)
-
-> 同样爱好安全的 bITeMe, 共同进步中, 来咬我啊.
-
-####[icebox](https://quininer.github.io/)
-
-> IRC 全天在线的奎宁大大, 中国 Tox 安利第一人.
+* [LAs' LOFTER | 一个恶人](http://lastavengers.lofter.com/)
+* [夏殇 | 不忘初心, 方得始终](http://xiashang.sinaapp.com/) 
+* [Special Blog](http://www.specyci.com/) 
+* [初心~](http://fleurer-lee.com/) 
+* [依云's Blog](http://lilydjwg.is-programmer.com/) 
+* [初心を忘れず](https://www.ricter.me/) 
+* [OctoBug | More than codes](http://octobug.github.io/)
+* [quininer | icebox](https://quininer.github.io/)
