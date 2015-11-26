@@ -20,3 +20,5 @@ layout: page
 {% include link.html name="LQYMGT" link="https://lqymgt.github.io/" desc="\#archlinux-cn 频道 .sm 最多的人." %}
 
 {% include link.html name="wicast" link="http://tnt.wicast.tk/" desc="首页是 Creeper 娘的 TNT 酱." %}
+
+{% include link.html name="farseerfc" link="http://farseerfc.me/" desc="在霓虹读 PHD 的博学的 fc 前辈，人生赢家." %}
