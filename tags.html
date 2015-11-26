@@ -2,16 +2,20 @@
 title: 标签
 layout: default
 ---
+<link type="text/css" rel="stylesheet" href="{{ site.baseurl }}assets/tags.css">
 <div class="posttext" style="margin-bottom: 20px;">
     <div class="posttitle">
         <a href="{{ page.url }}">标签</a><hr>
     </div>
-    {% for tag in site.tags %}
-    <a href="#{{ tag[0] }}" 
-        title="{{ tag[0] }}" 
-        style="font-size: {{ tag[1].size | divided_by:5 | times:20 | plus:100 }}%;"
-        >{{ tag[0] }}({{ tag[1].size }})</a>
-    {% endfor %}
+    <div class="tag">
+        {% for tag in site.tags %}
+        <a href="#{{ tag[0] }}" 
+           title="{{ tag[0] }}" 
+           style="font-size: {{ tag[1].size | divided_by:5 | times:20 | plus:100 }}%;">
+            <code>{{ tag[0] }}<sup> {{ tag[1].size }}</sup></code>
+        </a>
+        {% endfor %}
+    </div>
 </div>
 
 <div class="post">

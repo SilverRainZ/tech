@@ -1,4 +1,7 @@
 /* 对frame.css 样式的覆盖 */
+body {
+    min-width: 1200px;
+}
 .posttitle {
     font-size: 25px;
 }
