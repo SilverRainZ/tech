@@ -3,11 +3,20 @@ title: 链接
 layout: page
 ---
 
-* [LAs' LOFTER | 一个恶人](http://lastavengers.lofter.com/)
-* [夏殇 | 不忘初心, 方得始终](http://xiashang.sinaapp.com/) 
-* [Special Blog](http://www.specyci.com/) 
-* [初心~](http://fleurer-lee.com/) 
-* [依云's Blog](http://lilydjwg.is-programmer.com/) 
-* [初心を忘れず](https://www.ricter.me/) 
-* [OctoBug | More than codes](http://octobug.github.io/)
-* [quininer | icebox](https://quininer.github.io/)
+{% include link.html name="LA" link="http://lastavengers.lofter.com/" desc="一个恶人." %}
+
+{% include link.html name="夏殇" link="http://xiashang.sinaapp.com/" desc="大黑客白总." %}
+
+{% include link.html name="fleuria" link="http://fleurer-lee.com/" desc="在写 OS67 的时候给我很大的帮助." %}
+
+{% include link.html name="lilydjwg" link="http://lilydjwg.is-programmer.com/" desc="美味或者流浪的百合仙子" %}
+
+{% include link.html name="quininer" link="https://quininer.github.io/" desc="~~u need Tox~~ :D" %}
+
+{% include link.html name="Ricter" link="https://www.ricter.me/" desc="成天虐狗的 Ricter 大大." %}
+
+{% include link.html name="BiTeMe" link="http://octobug.github.io/" desc="SCAUSEC 队友" %}
+
+{% include link.html name="LQYMGT" link="https://lqymgt.github.io/" desc="\#archlinux-cn 频道 .sm 最多的人." %}
+
+{% include link.html name="wicast" link="http://tnt.wicast.tk/" desc="首页是 Creeper 娘的 TNT 酱." %}
