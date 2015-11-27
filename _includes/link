@@ -1,4 +1,3 @@
-<blockquote id="#{{ include.name }}"><a href="{{ include.link }}">{{ include.name }}</a></blockquote>
+<blockquote id="{{ include.name }}"><a href="{{ include.link }}">{{ include.name }}</a></blockquote>
 
 {{ include.desc }}
-

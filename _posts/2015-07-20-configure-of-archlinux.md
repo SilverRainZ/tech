@@ -19,7 +19,7 @@ tags: Linux
 * xmonad, xmonad-contrib 
 * xmobar         
 * dmenu          
-* ~~trayer~~ trayer-srg<rt>AUR</rt>
+* ~~trayer~~ trayer-srg<sup>AUR</sup>
 * feh
 * scrot
 * compton
@@ -33,7 +33,7 @@ dmenu 是个启动器, 功能比较简单, 所以不需要什么特殊的配置,
 
 trayer 是个系统托盘, 用来容纳各种图标, 启动选项如下:
 
-> 2015-8-30: trayer 不支持多个屏幕, 建议使用 AUR 里的 trayer-srg<rt>AUR</rt>
+> 2015-8-30: trayer 不支持多个屏幕, 建议使用 AUR 里的 trayer-srg<sup>AUR</sup>
 
 ```bash
 trayer --edge top --align right --widthtype percent --width 11 \
@@ -98,7 +98,7 @@ TM2013 可能是运行在 Wine 上表现最好的一个版本了, 我下载了 [
 
 对于 Qt 程序, dolphin 有很好看的外观, 但是同为 kde-applications 的 konsole 的界面却依然很丑... 
 
-> 2015-7-24: 经过 IRC 里 fc 前辈和奎宁大大的~~调教~~, 发现原来 dolphin 还是 kde4 而 konsole 已经是 kde5 了.
+> 2015-7-24: 经过 IRC 里 {% include friend name="farseerfc" %} 前辈和 {% include friend name="quininer" %} 的~~调教~~, 发现原来 dolphin 还是 kde4 而 konsole 已经是 kde5 了.
 
 <br>
 
