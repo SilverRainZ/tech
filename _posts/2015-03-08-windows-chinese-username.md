@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: 折腾 Windows
+tags: Windows
 title: 把 Windows 中文用户名改为英文
 ---
 
