@@ -2,11 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- 外部样式 -->
-<link type="text/css" rel="stylesheet" href="{{ site.baseurl }}assets/default.css">
-
+<link type="text/css" rel="stylesheet" href="/assets/default.css">
 <link rel="shortcut icon" href="{{ site.avatar }}">
+<script src="/assets/script.js"></script>
 
 <title>{{ page.title }} | LA </title>
 </head>
@@ -14,9 +13,9 @@
 <!-- 侧边栏 -->
 <div class="sidebar">
     <a href="/">
-        <img width="80" height="80" style="border-radius: 50%" src="{{ site.avatar }}">
+        <img id="avatar" width="80" height="80" style="border-radius: 50%" src="{{ site.avatar }}">
     </a>
-    <h2><a href="{{ site.baseurl }}">谷月轩</a></h2>
+    <h2><a href="/">谷月轩</a></h2>
     <p>No Silver Bullet.</p>
     <ul>
         <li><a href="/">时间线</a></li>
@@ -42,4 +41,5 @@
 <!-- 页脚结束 -->
 <!-- gostats 统计 -->
 {% include gostats %}
+<script> listenallimg(); </script>
 </html>

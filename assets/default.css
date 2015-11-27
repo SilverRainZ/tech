@@ -59,9 +59,6 @@ a:hover {
     margin: 0px auto;
     width: 500px;
 }
-.postlist img { 
-    width: 100%; 
-}
 .post {
     background: none repeat scroll 0% 0% rgba(21, 21, 21, 0.8);
     border-radius: 3px;
