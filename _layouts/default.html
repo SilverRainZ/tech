@@ -13,19 +13,19 @@
 <body>
 <!-- 侧边栏 -->
 <div class="sidebar">
-    <a href="{{ site.baseurl }}">
+    <a href="/">
         <img width="80" height="80" style="border-radius: 50%" src="{{ site.avatar }}">
     </a>
     <h2><a href="{{ site.baseurl }}">谷月轩</a></h2>
     <p>No Silver Bullet.</p>
     <ul>
-        <li><a href="{{ site.baseurl }}">时间线</a></li>
-        <li><a href="{{ site.baseurl }}archive.html">归档</a></li>
-        <li><a href="{{ site.baseurl }}tags.html">标签</a></li>
-        <li><a href="{{ site.baseurl }}links.html">链接</a></li>
-        <li><a href="{{ site.baseurl }}projects.html">项目</a></li>
-        <li><a href="{{ site.baseurl }}about.html">关于</a></li>
-        <li><a href="{{ site.baseurl }}feed.xml">RSS</a></li>
+        <li><a href="/">时间线</a></li>
+        <li><a href="/archive.html">归档</a></li>
+        <li><a href="/tags.html">标签</a></li>
+        <li><a href="/links.html">链接</a></li>
+        <li><a href="/projects.html">项目</a></li>
+        <li><a href="/about.html">关于</a></li>
+        <li><a href="/feed.xml">订阅</a></li>
     </ul>
 </div>
 <!-- 侧边栏结束 -->
@@ -36,10 +36,10 @@
 <!-- 主体结束 -->
 <!-- 页脚 -->
 <div class="footer">
-    © <a href="https://github.com/LastAvenger">LastAvengers</a> | Powered by <a href="http://jekyllrb.com/">Jekyll</a>
+    {{ site.time | date:"%Y" }} © <a href="/">LastAvengers</a> | Powered by <a href="http://jekyllrb.com/">Jekyll</a>
 </div>
 </body>
 <!-- 页脚结束 -->
 <!-- gostats 统计 -->
-{% include gostats.html %}
+{% include gostats %}
 </html>
