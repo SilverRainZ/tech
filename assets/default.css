@@ -125,6 +125,7 @@ a:hover {
     line-height: 40px;
     text-align: center;
     width: 100%;
+    z-index: 998;
 }
 .footer a {
     color: #666;
