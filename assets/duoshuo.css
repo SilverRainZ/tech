@@ -58,5 +58,9 @@
 /* 浮动窗口 */
 #ds-wrapper #ds-reset .ds-dialog-inner {
     background: none repeat scroll 0% 0% rgba(21, 21, 21, 0.8) !important;
-    text-shadow: none;
 }
+#ds-thread #ds-reset #ds-bubble{
+    text-shadow: none;
+    background: none repeat scroll 0% 0% rgba(21, 21, 21, 0.8) !important;
+}
+
