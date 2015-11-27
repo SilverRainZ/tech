@@ -15,6 +15,9 @@ body {
     min-width: 900px;
 }
 
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
 /* 普通链接样式 */
 a {
     color: #DDD;
@@ -132,27 +135,27 @@ a:hover {
 .footer a:hover{
     color: #AAA;
 }
-/* 对markdown效果的增强*/
 code {
     background: none repeat scroll 0% 0% rgba(20, 20, 20, 0.8);
     border-radius: 2px;
     font-size: 14px;
     font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
-    margin: 4px;
-    padding: 4px;
+    margin: 2px;
+    padding: 4px 3px 2px 4px;
     overflow: auto;
     overflow-y: hidden;
+    white-space: nowrap;
 }
-
+/* 拥有 class 属性的 都是由 highlight.js 生成的 */
+code[class] {
+    white-space: pre;
+}
 .tag code {
     background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.2);
     font-size: 13px;
-    margin: 2px;
-    padding: 2px;
 }
-
 blockquote {
-    background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.1);
+    background: none repeat scroll 0% 0% rgba(200, 200, 200, 0.1);
     border-left: 5px solid #AAA;
     margin: 0px;
     padding-left: 1.0em;
