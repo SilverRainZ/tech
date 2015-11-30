@@ -1,6 +1,6 @@
 function listenallimg(){
-    for (var img of document.querySelectorAll('img')) {
-        if (img.id != "avatar") img.onclick = viewimg;
+    for (var img of Array.from(document.querySelectorAll('img'))) {
+        if (img.id != "avatar") img.onclick = viewimg; 
     }
 }
 
