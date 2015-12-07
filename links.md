@@ -1,6 +1,7 @@
 ---
 title: 链接
 layout: page
+id: links
 ---
 
 {% include link name="LA" link="http://lastavengers.lofter.com/" desc="一个恶人." %}

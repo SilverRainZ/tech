@@ -1,6 +1,7 @@
 ---
 title: 关于
 layout: page
+id: about
 ---
 
 **这是一个有关现存于世人物的条目。**
