@@ -25,11 +25,10 @@ OS67 是一个基于 x86 的 unix-like 玩具内核，借鉴了大量 xv6 的代
 * unix-like 的操作系统接口：文件描述符，IO 重定向
 * 简单的用户程序
 
-## lofter-jekyll-theme
+## silk-jekyll-theme
 <hr>
-{% include github-card repo="LastAvenger/lofter-jekyll-theme "%}
+{% include github-card repo="LastAvenger/silk-jekyll-theme "%}
 {{ page.stat-update }}
 
-这是本站使用的模版，花里胡哨，结构简单，样式来自网易 LOFTER 的用户主题。
+这是本站使用的模版，改良自来自网易 LOFTER 的用户主题「丝」。
 
-支持标签云和归档，支持 RSS 输出，包含 highlight.js 以高亮代码。
