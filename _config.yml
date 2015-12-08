@@ -4,6 +4,6 @@ paginate_path: "page:num"
 encoding: utf-8
 markdown: rdiscount
 name: LA
-description:  LastAvengers' blog
+description:  No Silver Bullet.
 url: https://lastavenger.github.io
 avatar: https://secure.gravatar.com/avatar/f122d4b03bb7c1e7fd3d89a92a6f2ea9

@@ -18,7 +18,7 @@ layout: default
     {% include duoshuo %}
     <div class="postfooter">
         <div class="postdate">
-            <a href="">{{ page.date | date_to_string }}</a> 
+            <a href="/archives.html#{{ page.date | date:"%Y 年 %m 月" }}">{{ page.date | date_to_string }}</a>
         </div>
         <div class="switchpage">
             {% if page.previous %}
