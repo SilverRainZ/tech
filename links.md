@@ -24,4 +24,6 @@ id: links
 
 {% include link name="farseerfc" link="http://farseerfc.me/" desc="在霓虹读 PHD 的博学的 fc 前辈，人生赢家." %}
 
-{% include link name="Storm" link="http://www.7kb.org/" desc="尖刀 107 的小伙伴." %}
+{% include link name="Storm" link="http://www.7kb.org/" desc="尖刀 107 小伙伴." %}
+
+{% include link name="风迷" link="http://metasploit.lofter.com/" desc="尖刀 107 的小伙伴 + 1." %}
