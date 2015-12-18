@@ -23,3 +23,5 @@ id: links
 {% include link name="wicast" link="http://tnt.wicast.tk/" desc="首页是 Creeper 娘的 TNT 酱." %}
 
 {% include link name="farseerfc" link="http://farseerfc.me/" desc="在霓虹读 PHD 的博学的 fc 前辈，人生赢家." %}
+
+{% include link name="Storm" link="http://www.7kb.org/" desc="尖刀 107 的小伙伴." %}
