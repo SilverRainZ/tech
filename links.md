@@ -27,3 +27,5 @@ id: links
 {% include link name="Storm" link="http://www.7kb.org/" desc="尖刀 107 小伙伴." %}
 
 {% include link name="风迷" link="http://metasploit.lofter.com/" desc="尖刀 107 的小伙伴 + 1." %}
+
+{% include link name="cyseria" link="http://cyseria.xyz/" desc="师姐" %}
