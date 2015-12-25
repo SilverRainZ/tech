@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 几种简单的反调试方法
-tags: 逆向工程
+tags: Reverse
 ---
 
 这里面没有什么自己的东西, 都是从看雪的[OD从零系列教程](http://bbs.pediy.com/showthread.php?t=184679)里看来的.

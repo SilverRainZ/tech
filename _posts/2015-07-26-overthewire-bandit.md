@@ -1,7 +1,7 @@
 ---
 layout: post
 title: OverTheWire Bandit
-tags: CTF
+tags: CTF Linux
 path: /assets/2015-7-26-overthewire-bandit
 ---
 题目地址: [OverTheWire: Bandit](http://overthewire.org/wargames/bandit/).

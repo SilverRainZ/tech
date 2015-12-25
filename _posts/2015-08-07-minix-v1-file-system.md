@@ -2,7 +2,7 @@
 layout: post
 title: Minix v1 文件系统的实现
 path: /assets/2015-8-7-minix-v1-file-system
-tags: 操作系统
+tags: OS
 ---
 ##Minix FS
 Minix file system 是 Andrew S. Tanenbaum 在 198x 年发明的文件系统, 并随着 Minix 1.0 版一起于 1987 年释出[1], Linus 编写 Linux 0.11时, 使用的也是 Minix FS, Linux 至今依然提供了对 Minix FS 的支持. Minix FS 结构简单, 易于理解, 并且资料相当丰富, 

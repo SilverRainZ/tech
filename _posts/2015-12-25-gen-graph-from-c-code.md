@@ -53,9 +53,9 @@ digraph callgraph {
 ├── inc     # 头文件
 ├── kern    # 保护模式相关代码
 ├── libs    # 库文件
-├── lst     
-├── mm      # 内存管理 
-├── notes   
+├── lst
+├── mm      # 内存管理
+├── notes
 ├── proc    # 进程管理
 ├── script  # 各种配置文件和链接脚本
 └── usr     # 用户例程

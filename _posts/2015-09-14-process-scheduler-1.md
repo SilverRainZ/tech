@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: 操作系统
+tags: OS
 title: 用户态进程的简单实现及调度(一)
 ---
 > update: 在写这篇的时候, 我发觉我很难在这短短一篇博文里把进程的实现将清楚, 并且可能存在一些理解的偏差, 因此本篇仅供参考, 更加准确的表述, 还请参考 [第五章 调度 | xv6 中文文档](https://th0ar.gitbooks.io/xv6-chinese/content/content/chapter5.html)
