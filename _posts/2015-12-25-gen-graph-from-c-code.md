@@ -1,15 +1,15 @@
 ---
 layout: post
 path: /assets/2015-12-25-gen-graph-from-c-code
-title: 从 C 源代码生成 函数/模块 调用图
+title: 从 C 源码生成 函数/模块 调用图
 tags: C
 ---
 
-前天是操作系统课程设计的截至日期，这意味这 [OS67 这个坑](https://github.com/LastAvenger/OS67) 完全告一段落了，接下来的事情是写报告，不过鉴于 OS 的老师这一学期都没出现过，报告应该可以随便水过去，据说连答辩都可以省掉了……
+前天是操作系统课程设计的截止日期，这意味这 [OS67 这个坑](https://github.com/LastAvenger/OS67) 已经告一段落了，接下来的事情是写报告，不过鉴于 OS 的老师这一学期都没出现过，报告应该可以随便水过去，据说连答辩都可以省掉了……
 
-前面的都是废话，因为报告里要求画出函数调用图，于是就打算直接用软件生成好了。
+前面说的都是废话，报告里要求画出函数调用图，于是就打算直接用软件生成好了。
 
-用到的软件有 graphviz，egypt<sup>AUR</sup>，cinclude2dot<sup>AUR</sup>，{% include friend name="farseerfc" %} 推荐了 makecpp，然而 AUR 里面没有就作罢了。
+用到的软件有 graphviz，egypt<sup>AUR</sup>，cinclude2dot<sup>AUR</sup>，{% include friend name="farseerfc" %} 推荐了 [makepp](http://makepp.sourceforge.net/)，然而 AUR 里面没有就作罢了。
 
 ## 生成函数调用图
 安装 egypt 直接 `yaourt -S egypt` 即可，之后在 makefile 里面的 CFLAG 里面增加一句 `-fdump-rtl-expand`，再 make 一次，gcc 会在 bulid 目录下生成 `*.expand` 文件，这是 egypt 生成 call graph 所需要的信息。
@@ -39,7 +39,7 @@ digraph callgraph {
 
 这么大的图片用在报告里显然是不行的，不过函数间的调用逻辑也就那样了，没法做什么简化，所以对于整个项目我只生成了后面的模块调用图。
 
-既然整个项目的图太大了，那就生成模块内部的调用图好了，OS67 的项目长这样：
+既然整个项目的图太大了，那就生成模块内部的调用图好了，OS67 的项目结构长这样，模块和文件夹基本上是一一对应的：
 
 ```tree
 ➜  OS67 git:(master) ✗ tree -d
@@ -117,13 +117,13 @@ digraph "source tree" {
     ...
 ```
 
-如果 tty.c 包含了 printk.h，说明它调用了 printk.c 里的函数，那就有关系 `"tty" -> "printk"`，
+如果 dev/tty.c 包含了 inc/printk.h，说明它调用了 libs/printk.c 里的函数，那就有关系 `"tty" -> "printk"`，
 那可以考虑把文件名替换为该文件所在的目录名，那关系就变成了 `"dev" -> "libs"`。
 
 这样替换要注意的是：
 
-* 不能将头文件目录成一个模块，如 `"tty" -> "printk"` 的关系的右边本来就是一个头文件，在这里它应当属于 libs 模块而不属于 inc，如果强行加入 inc 的话结果就和上面用 `--merge directory` 的效果差不多了：每个顶点会都指向 inc
-* 排除 inc 后，要注意的是有些只包含宏定义头文件并没有对应的 `*.c` 文件，比如上面的 `"p2i" -> "type"` ，那么这一行应当删除掉
+* 不能将头文件目录当成一个模块，如 `"tty" -> "printk"` 的关系的右边本来就是一个头文件，在这里它应当属于 libs 模块而不属于 inc，如果强行加入 inc 的话结果就和上面用 `--merge directory` 的效果差不多了：每个顶点会都指向 inc
+* 排除 inc 后，要注意的是有些只包含宏定义的头文件并没有对应的 `*.c` 文件，比如上面的 `"p2i" -> "type"` 存在 inc/type.h ，但是并没有 type.c 这么一个文件，那么这一行应当删除掉
 * 将文件名替换成目录名后会出现重复的项目，`"ide" -> "printk"` 和 `"vga" -> "printk"` 替换后的结果都是 `"drv" -> "libs"`，需要去重
 
 把这些事情交给脚本吧，从每个要统计的模块（目录）里面取得文件列表，把文件名替换为目录名，去除单独的 `*.h` 文件对应的行，去除重复行。
