@@ -2,6 +2,7 @@
 title: 链接
 layout: page
 id: links
+icon: fa-link
 ---
 
 {% include link name="LA" link="http://lastavengers.lofter.com/" desc="一个恶人." %}

@@ -4,7 +4,7 @@ layout: default
 ---
 <div class="posttext" style="margin-bottom: 20px;">
     <div class="posttitle">
-        <a href="{{ page.url }}">归档</a><hr>
+        <a href="{{ page.url }}"><i class="fa fa-archive"></i>&nbsp;&nbsp;归档</a><hr>
     </div>
     <ul>
         {% for post in site.posts %}
@@ -28,8 +28,8 @@ layout: default
             <ul>
             {% endif %}
             <li>
-            <time datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time>
-            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+            <time datetime="{{ post.date }}">{{ post.date | date:"%Y 年 %m 月" }}</time>
+            <a href="{{ post.url }}" title="{{ post.title }}">&nbsp;&nbsp;{{ post.title }}</a>
             </li>
             {% endfor %}
         </ul>

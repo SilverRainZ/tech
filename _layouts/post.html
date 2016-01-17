@@ -10,26 +10,34 @@ layout: default
 <div class="post">
     <div class="posttext">
         <div class="posttitle">
-            <a href="{{ page.url }}">{{ page.title }}</a>
+            <a href="{{ page.url }}"><i class="fa fa-file-text-o"></i>&nbsp;&nbsp;{{ page.title }}</a>
             <hr>
         </div>
+        <i class="fa fa-tags"></i>&nbsp;&nbsp;
+        {% for tag in page.tags %}
+        <a href="/tags.html#{{ tag }}">{{ tag }}&nbsp;&nbsp;</a>
+        {% endfor %}
+        <div class="postcontent">
         {{ content }}
+        </div>
     </div>
     {% include commentbox %}
     <div class="postfooter">
         <div class="postdate">
-            <a href="/archives.html#{{ page.date | date:"%Y 年 %m 月" }}">{{ page.date | date_to_string }}</a>
+            <a href="/archives.html#{{ page.date | date:"%y 年 %m 月" }}">
+                <i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{ page.date | date_to_string }}
+            </a>
         </div>
         <div class="switchpage">
             {% if page.previous %}
-            <a href="{{ page.previous.url }}">◣ 上 • {{ page.previous.title }}</a>
+            <a href="{{ page.previous.url }}"><i class="fa fa-chevron-left"></i>&nbsp;&nbsp;上 • {{ page.previous.title }}</a>
             {% else %}
-            <a>◣ 上 • 尽头</a>
+            <a><i class="fa fa-chevron-left"></i>&nbsp;&nbsp;上 • 尽头</a>
             {% endif %}
             {% if page.next %}
-            <a href="{{ page.next.url }}">下 • {{ page.next.title }} ◢ </a>
+            <a href="{{ page.next.url }}">下 • {{ page.next.title }}&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></a>
             {% else %} 
-            <a>下 • 尽头 ◢ </a>
+            <a>下 • 尽头&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></a>
             {% endif %}
         </div>
     </div>

@@ -8,6 +8,8 @@ body {
 .postlist {
     width: 800px;
     color:#BBB;
+}
+.postcontent {
     font-size: 14px;
 }
 .switchpage {

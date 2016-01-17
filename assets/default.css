@@ -84,17 +84,27 @@ a:hover {
     padding: 0px 20px;
 }
 .postdate a{
-    background: url("icon.png") no-repeat scroll 0px 0px transparent;
-    background-position: 0px 14px;
     color: #666;
-    padding: 0px 20px;
     height: 40px;
     display: inline-block;
 }
 .postdate a:hover{
     color: #AAA;
-    background-position: 0px -93px;
+}
+.posttags {
+    float: right;
+    display: inline;
+    padding-left: 25px;
+    line-height: 40px;
+    padding: 0px 20px;
+}
+.posttags a{
+    color: #666;
+    height: 40px;
     display: inline-block;
+}
+.posttags a:hover{
+    color: #AAA;
 }
 /* 翻页 */
 .switchpage {
@@ -157,4 +167,19 @@ blockquote {
     border-left: 5px solid #AAA;
     margin: 0px;
     padding-left: 1.0em;
+}
+::-moz-selection{   /*针对Firefox*/
+    background: none repeat scroll 0% 0% rgba(115, 184, 57, 0.25);
+}
+
+::selection {
+    background: none repeat scroll 0% 0% rgba(115, 184, 57, 0.25);
+}
+
+code::-moz-selection { /*code是标签选择器，可以换成p或span等*/
+    background: none repeat scroll 0% 0% rgba(115, 184, 57, 0.25);
+}
+
+code::selection {
+    background: none repeat scroll 0% 0% rgba(115, 184, 57, 0.25);
 }

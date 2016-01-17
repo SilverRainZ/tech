@@ -6,10 +6,12 @@ layout: default
 <div class="post">
     <div class="posttext">
         <div class="posttitle">
-            <a href="{{ page.url }}">{{ page.title }}</a>
+            <a href="{{ page.url }}"><i class="fa {{ page.icon }}"></i>&nbsp;&nbsp;{{ page.title }}</a>
             <hr>
         </div>
-        {{ content | markdownify }}
+        <div class="postcontent">
+            {{ content | markdownify }}
+        </div>
     </div>
     {% include commentbox %}
     <div class="postfooter"></div>
