@@ -4,9 +4,6 @@ layout: page
 id: links
 icon: fa-link
 ---
-
-{% include link name="LA" link="http://lastavengers.lofter.com/" desc="一个恶人." %}
-
 {% include link name="夏殇" link="http://xiashang.sinaapp.com/" desc="大黑客白总." %}
 
 {% include link name="fleuria" link="http://fleurer-lee.com/" desc="在写 OS67 的时候给我很大的帮助." %}

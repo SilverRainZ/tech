@@ -9,7 +9,7 @@ html {
 body {
     background: url("line.png") repeat fixed -42px top transparent;
     color: #888;
-    font: 12px/200% "Source Han Sans","Noto Sans","Noto Sans CJK CN","Noto Sans CJK JP","Noto Sans CJK","RobotoDraft","Roboto","Helvetica Neue","WenQuanYi Micro Hei","WenQuanYi Zen Hei",Helvetica,Arial,sans-serif;
+    font: 12px/200% "Noto Sans", "Noto Sans CJK CN", "Noto Sans CJK","RobotoDraft","Roboto","Helvetica Neue","WenQuanYi Micro Hei","WenQuanYi Zen Hei", Helvetica, Arial, sans-serif;
     padding: 0px;
     margin: 0px;
     min-width: 900px;
