@@ -29,3 +29,5 @@ icon: fa-link
 {% include link name="cyseria" link="http://cyseria.xyz/" desc="师姐" %}
 
 {% include link name="Ken_Ookami_Horo" link="https://blog.yoitsu.moe/" desc="来自约伊兹的贤狼赫萝，掌管丰收之神." %}
+
+{% include link name="frantic1048" link="http://frantic1048.logdown.com/" desc="会画画的萌萌的前端高手智乃." %}
