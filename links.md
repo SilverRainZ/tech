@@ -12,7 +12,7 @@ icon: fa-link
 
 {% include link name="quininer" link="https://quininer.github.io/" desc="~~u need Tox~~ :D" %}
 
-{% include link name="Ricter" link="https://www.ricter.me/" desc="成天虐狗的 Ricter 大大." %}
+{% include link name="Ricter" link="http://ricterz.me/" desc="成天虐狗的 Ricter 大大." %}
 
 {% include link name="BiTeMe" link="http://octobug.github.io/" desc="SCAUSEC 队友" %}
 
