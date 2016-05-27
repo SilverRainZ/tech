@@ -8,10 +8,10 @@ layout: default
     </div>
     <ul>
         {% for post in site.posts %}
-        {% capture ym %}{{ post.date | date:"%Y 年 %m 月" }}{% endcapture %}
-        {% if yearmonth != ym %}
-        {% assign yearmonth = ym %}
-        <li><a href="#{{ ym }}">{{ ym }}</a></li>
+        {% capture y %}{{ post.date | date:"%Y 年" }}{% endcapture %}
+        {% if year != y %}
+        {% assign year = y %}
+        <li><a href="#{{ y }}">{{ y }}</a></li>
         {% endif %}
         {% endfor %}
     </ul>
@@ -20,15 +20,15 @@ layout: default
     <div class="posttext">
         <ul>
             {% for post in site.posts %}
-            {% capture ym %}{{ post.date | date:"%Y 年 %m 月" }}{% endcapture %}
-            {% if yearmonth != ym %}
-            {% assign yearmonth = ym %}
+            {% capture y %}{{ post.date | date:"%Y 年" }}{% endcapture %}
+            {% if year != y %}
+            {% assign year = y %}
             </ul>
-            <blockquote id="{{ ym }}">{{ ym }}</blockquote>
+            <blockquote id="{{ y }}">{{ y }}</blockquote>
             <ul>
             {% endif %}
             <li>
-            <time datetime="{{ post.date }}">{{ post.date | date:"%Y 年 %m 月" }}</time>
+            <time datetime="{{ post.date }}">{{ post.date | date:"%m 月 %d 日" }}</time>
             <a href="{{ post.url }}" title="{{ post.title }}">&nbsp;&nbsp;{{ post.title }}</a>
             </li>
             {% endfor %}
