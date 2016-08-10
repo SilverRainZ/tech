@@ -4,50 +4,81 @@ title: 编写便于打包的 Makefile
 tags: Linux C Makefile ArchLinux
 ---
 
-网络上关于 Makefile 的教程不少，但似乎都止于「如何用 Makefile 自动编译程序」，
-而关于如何用 Makefile 安装程序的文章却寥寥无几。（也可能是我关键词不对，反正我搜了好久都没搜到）
-最近在做 [Srain](https://github.com/LastAvenger/srain) 的时候，算是琢磨出了对于 `make install` 的比较正确的写法，
+> Note: 这篇文章假设你已经知道基本的 Makefile 编写规则
 
-首先，对于生成的项目是单可执行文件的情况下，直接 `install -755 xxx /usr/bin/xxx` 就好了。
-但是并非所有项目都只要单个可执行文件，程序可能还包含了 man 文档，icons，图片，配置文件等，这里只考虑项目需要已。
+安装基于 make 构建的程序基本上就是两个步骤：`make` 然后 `make install`，
+前者把程序按依赖关系编译，后者把文档、数据、编译出来的二进制安装到系统中。
+网络上关于 GNU Make 的教程不少，但似乎都止于「如何用 Makefile 自动编译程序」（`make`），
+而关于用 Makefile 编写安装脚本（`make install`）的文章却寥寥无几。
 
-假设项目结构如下，代码文件里写了什么不重要~
+> 2016-08-10: 经 盖子 提醒，make 本来就不适合做这种事情，于是才有了 autotools
+> 这「更好」的构建工具。
+
+最近在写 [Srain](https://github.com/LastAvenger/srain) 的时候，
+算是摸索出了对于 `make install` 的比较正确的写法：
+
+首先，对于项目生成产物只是单个可执行文件的情况下，直接在 install 目标里写
+`install -Dm755 xxx /usr/bin/xxx` 就好了。
+但是并非所有项目都只包含单个可执行文件，程序可能还包含了 man 文档，icons，
+图片，配置文件等，这些都要被安装到文件系统相应的位置上。
+
+我们先假设项目的结构如下，代码写了什么不重要~
 
 ```
 .
 ├── build
 ├── data
-│   └── pixmaps
-│       └── srain-avatar.png
+│   ├── pixmaps
+│   │   └── srain-avatar.png
+│   └── icons
+│       └── 16x16
+│           └── srain-icon.png
 ├── Makefile
 └── srain.c
 ```
 
-## 题外话：关于图标
+build 是存放编译中间文件和编译出来的二进制文件的地方，srain.c 是主程序代码，
+srain-avatar.png 是程序要用到的图片。srain-icon.png 是程序图标。
 
-对于图标，[1] 规定了图标在文件系统上的位置，程序只需要根据图标的名称就可已获得图标（当然要借助各种库函数，比如 gtk 的 `gtk_image_new_from_icon_name`），
-根据 spec 看，程序应该依次检查 `$HOME/.icons`、`$XDG_DATA_DIRS/icons` 和 `/usr/share/pixmaps`。
+## 安装图标
+对于图标，freedesktop[1] 规定了图标在文件系统上的位置，程序只需要根据图标的名称
+（即文件名去掉扩展名）和大小就可以获得图标文件的路径
+（当然要借助各种库函数，比如 gtk 的 `gtk_image_new_from_icon_name`），
+因此我们只要将图标文件复制到对应的位置上即可。
 
-当 `$XDG_DATA_DIRS` 为空时，`$XDG_DATA_DIRS` 会默认为 `/usr/local/share/:/usr/share/` [2]（感谢 csslayer 指出）。
+根据 spec 看，程序寻找图标时应该依次检查 `$HOME/.icons`、`$XDG_DATA_DIRS/icons` 和 `/usr/share/pixmaps`。
 
-因此把图标安装在 `/usr/share/pixmaps`、`/usr/local/share/icons` 和 `/usr/share/icons` 下都是可行的，Arch Linux 偏向于安装在最后一个目录。
-于是可以像这样安装 16x16 的图标：
+当 `$XDG_DATA_DIRS` 为空时，`$XDG_DATA_DIRS` 会默认为 `/usr/local/share/:/usr/share/` [2]
+（感谢 csslayer 指出）。
+
+因此把图标安装在 `/usr/share/pixmaps`、`/usr/local/share/icons` 和 `/usr/share/icons`
+下都是可行的，Arch Linux 偏向于安装在最后一个目录。 于是安装 *大小为 16x16 的图标* 的脚本可以这么写：
 
 ```Makefile
 cd data/icons/16x16; \
-for png in *.png; do \
-			install -Dm644 "$$png" \
-				"$(DESTDIR)/usr/share/icons/hicolor/16x16/apps/$$png"; \
-		done
+    for png in *.png; do \
+        install -Dm644 "$$png" \
+            "$(DESTDIR)/usr/share/icons/hicolor/16x16/apps/$$png"; \
+    done
+```
+
+这里先不管 `$(DESTDIR)` 是什么东西，把它当作空变量即可：
+
+```Makefile
+install -Dm644 "$$png" \
+    "/usr/share/icons/hicolor/16x16/apps/$$png"; \
 ```
 
 ## PREFIX
 除了图标之外，其他的数据文件应该如何组织？
-对此 GNU 给出了他的规范 [3]：
+至少我们应该做到的是：
 
-GNU make 提供了 prefix 等变量确定各种文件安装的位置：
+- 保证程序一定能找到数据文件
+- 一定程度上允许用户自定义安装的位置
 
-* `prefix` 是下述变量的前缀，默认的 prefix 值应该是 `/usr/loacl`
+GNU make 提供了 prefix 等变量确定各种文件安装的位置[3]：
+
+* `prefix` 是下述变量的前缀，默认的 prefix 值应该是 `/usr/local`
     * `exec_prefix` 是下述变量的前缀，通常和 `prefix` 相等
         * `bindir` 安装可执行文件的位置，其值应为 `$(exec_prefix)/bin`
         * ...
@@ -55,8 +86,8 @@ GNU make 提供了 prefix 等变量确定各种文件安装的位置：
     * `sysconfdir` 用来安装只读的配置文件，其值应为 `$(predix)/etc`
     * ...
 
-[3] 中列出了各种用途的目录，但事实上我们不需要把数据文件分成那么细的粒度。对于简单的项目，只有 prefix
-是必要的，其他路径都可以 hardcode。
+[3] 中列出了各种用途的目录，但事实上我们不需要把数据文件分成那么细的粒度。
+对于简单的项目，只有 prefix 是必要的，其他路径都可以 hardcode。
 
 `make install` 可以这么写（为了命名统一，prefix 用大写）：
 
@@ -77,7 +108,7 @@ install:
 
 ```Makefile
 CC = gcc
-CFLAGS = -O2 -Wall 
+CFLAGS = -O2 -Wall
 DEFS = -DPACKAGE_DATA_DIR=\"$(PREFIX)\"
 
 TARGET = build/srain
@@ -108,18 +139,29 @@ gchar *get_pixmap_path(const gchar *filename){
 }
 ```
 
-注意上面的代码使用了 glib 函数库，当指定 prefix 为 `/usr`，程序便会从 `/usr/share/srain/pixmaps` 里寻找图片。
+注意上面的代码使用了 glib 函数库，当指定 prefix 为 `/usr`，
+程序便会从 `/usr/share/srain/pixmaps` 里寻找图片。
 
-> 自行编译安装的程序通常被安装在 `/usr/local`, 这也是 GNU 推荐的 prefix  
+> 自行编译安装的程序通常被安装在 `/usr/local`, 这也是 GNU 推荐的 prefix，
 > Arch Linux 的包的 prefix 通常是 `/usr`。
 
-如上一番设定后，程序经过编译和安装后便可以运行指定的任意目录上了，你也可以指定为 `$(PWD)/build` 方便调试。
+如上一番设定后，程序经过编译和安装后便可以运行指定的任意目录上了，
+你也可以指定为 `$(PWD)/build` 方便调试。
 
 `make PREFIX=/usr; make PREXI=/usr install` 后，产生的文件如下：
 
 ```
 /usr/bin/srain
 /usr/share/srain/pixmaps/srain-avatar.png
+/usr/share/icons/hicolor/16x16/apps/srain-icon.png
+```
+
+`make PREFIX=/usr; make PREXI=/home/la/tmp install` 则是：
+
+```
+/home/la/tmp/bin/srain
+/home/la/tmp/share/srain/pixmaps/srain-avatar.png
+/usr/share/icons/hicolor/16x16/apps/srain-icon.png
 ```
 
 ## DESTDIR
@@ -141,24 +183,26 @@ install:
 		done
 ```
 
-注意 DESTDIR 变量只应该作用在 install 阶段，`make PREFIX=/usr; make PREFIX=/usr DESTDIR=/tmp/` 会把所有文件都安装在 `/tmp` 下，
-所有的影响都被限制在该目录内。这次生成的文件应该是：
+注意 DESTDIR 变量只应该作用在 install 阶段，`make PREFIX=/usr; make PREFIX=/usr DESTDIR=/tmp/`
+会把所有文件都安装在 `/tmp` 下， 所有的影响都被限制在该目录内。这次生成的文件应该是：
 
 ```
 /tmp/usr/bin/srain
 /tmp/usr/share/srain/pixmaps/srain-avatar.png
+/tmp/usr/share/icons/hicolor/16x16/apps/srain-icon.png
 ```
 
 之后再由包管理器把这些文件打成包，安装到系统中。
 
 ## Configure
-上面的 Makefile 有处不优雅的地方是，`make` 和 `make install` 的时候必须指定相同的 PREFIX，不然安装后的程序肯定是运行不了的，而 make 本身并不能
-解决这个问题，因为 make 是「无状态」的。
+上面的 Makefile 有处不优雅的地方是，`make` 和 `make install` 的时候必须指定相同的 PREFIX，
+不然安装后的程序肯定是运行不了的，而 make 本身并不能解决这个问题，因为 make 是「无状态」的。
 
-[5] 提供了一个脚本来让解决这个问题，将 Makefile 改名为 Makefile.in，运行 `./configure --prefix=xxx` 来获得一个拥有指定 prefix 的
-Makefile，这样就可以不用每次敲 make 都输入 `PREFIX=xxx` 了。
+[5] 提供了一个脚本来让解决这个问题，将 Makefile 改名为 Makefile.in，
+运行 `./configure --prefix=xxx` 来获得一个拥有指定 prefix 的 Makefile，
+这样就可以不用每次敲 make 都输入 `PREFIX=xxx` 了。
 
-~~于是大家都去用 autotool 了~~
+~~于是大家都去用 autotools 了~~
 
 ```sh
 #!/bin/sh
@@ -187,7 +231,10 @@ cat Makefile.in >>Makefile
 echo 'configuration complete, type make to build.'
 ```
 
-## PKGBUILD
+如上，执行 `./configure --prefix=/usr` 就会把 Makefile.in 复制为 Makefile，并在
+Makefile 最前面加上一句 `PREFIX = /usr`（实际操作顺序是反过来的你们懂就好）。
+
+## 编写 Archlinux 的打包脚本 PKGBUILD
 这样的一个项目打包起来是很愉快的 :)
 
 ```sh
@@ -206,6 +253,9 @@ package() {
     make DESTDIR=$pkgdir install
 }
 ```
+
+完整的脚本请见：[srain.git - AUR Package Repositories](https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=srain)，
+可能稍有出入。
 
 ## 参考
 1. [Icon Theme Specification](https://specifications.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html)
