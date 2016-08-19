@@ -7,26 +7,7 @@ icon: fa-user
 
 关于我
 ------
-* LastAvengers A.K.A. 谷月轩
-* 天生愚鲁，刚愎自用
-* 娱乐圈外人士
-* 不会 Linux 的 Linux 用户
-
-社区
-----
-* [知乎](http://www.zhihu.com/people/lastavengers)
-* [Github](https://github.com/LastAvenger)
-* [Cnblog](http://www.cnblogs.com/lastavengers)
-
-项目
----
-见： [项目](/projects.html)
-
-联系方式
---------
-* Mail: `echo -n bGFzdGF2ZW5nZXJzQG91dGxvb2suY29t | base64 -d`
-* Tox:  `D2A256545453A5F9381C1A015083584A2EF59E93427CD538642A772E5E8C376A6D56AA7AC564`
-* IRC: irc.freenode.net @ LastAvengers
+[LastAvengers](/)
 
 关于本站
 --------

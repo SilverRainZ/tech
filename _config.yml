@@ -1,10 +1,10 @@
-baseurl: /
+baseurl: /tech
 gems: [jekyll-paginate]
 paginate: 10
 paginate_path: "page:num"
 encoding: utf-8
-markdown: rdiscount
+markdown: kramdown
 name: LA
 description:  No Silver Bullet.
-url: https://lastavenger.github.io
+url: https://lastavenger.github.io/tech
 avatar: https://secure.gravatar.com/avatar/f122d4b03bb7c1e7fd3d89a92a6f2ea9

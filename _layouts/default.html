@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <!-- 外部样式 -->
-<link type="text/css" rel="stylesheet" href="/assets/default.css">
+<link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/assets/default.css">
 <link rel="shortcut icon" href="{{ site.avatar }}">
-<link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css">
-<script src="/assets/script.js"></script>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/font-awesome/css/font-awesome.min.css">
+<script src="{{ site.baseurl }}/assets/script.js"></script>
 
 <title>{{ page.title }} | {{ site.name }} </title>
 </head>
@@ -19,13 +19,12 @@
     <h2><a href="/">谷月轩</a></h2>
     <p> {{ site.description }}</p>
     <ul>
-        <li><a href="/">时间线</a></li>
-        <li><a href="/archives.html">归档</a></li>
-        <li><a href="/tags.html">标签</a></li>
-        <li><a href="/links.html">链接</a></li>
-        <li><a href="/projects.html">项目</a></li>
-        <li><a href="/about.html">关于</a></li>
-        <li><a href="/feed.xml">订阅</a></li>
+        <li><a href="{{ site.baseurl }}/">时间线</a></li>
+        <li><a href="{{ site.baseurl }}/archives.html">归档</a></li>
+        <li><a href="{{ site.baseurl }}/tags.html">标签</a></li>
+        <li><a href="{{ site.baseurl }}/links.html">链接</a></li>
+        <li><a href="{{ site.baseurl }}/about.html">关于</a></li>
+        <li><a href="{{ site.baseurl }}/feed.xml">订阅</a></li>
     </ul>
 </div>
 <!-- 侧边栏结束 -->

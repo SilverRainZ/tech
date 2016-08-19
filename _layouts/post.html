@@ -1,10 +1,10 @@
 ---
 layout: default
 ---
-<link type="text/css" rel="stylesheet" href="/assets/post.css">
+<link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/assets/post.css">
 <!-- highlight.js  -->
-<link rel="stylesheet" href="/assets/highlight/styles/solarized_dark.css">
-<script src="/assets/highlight/highlight.pack.js"></script>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/highlight/styles/solarized_dark.css">
+<script src="{{ site.baseurl }}/assets/highlight/highlight.pack.js"></script>
 <script> hljs.initHighlightingOnLoad();</script>
 <!-- 博客主体  -->
 <div class="post">
@@ -15,7 +15,7 @@ layout: default
         </div>
         <i class="fa fa-tags"></i>&nbsp;&nbsp;
         {% for tag in page.tags %}
-        <a href="/tags.html#{{ tag }}">{{ tag }}&nbsp;&nbsp;</a>
+        <a href="{{ site.baseurl }}/tags.html#{{ tag }}">{{ tag }}&nbsp;&nbsp;</a>
         {% endfor %}
         <div class="postcontent">
         {{ content }}
@@ -24,18 +24,18 @@ layout: default
     {% include commentbox %}
     <div class="postfooter">
         <div class="postdate">
-            <a href="/archives.html#{{ page.date | date:"%y 年 %m 月" }}">
+            <a href="{{ site.baseurl }}/archives.html#{{ page.date | date:"%y 年 %m 月" }}">
                 <i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{ page.date | date_to_string }}
             </a>
         </div>
         <div class="switchpage">
             {% if page.previous %}
-            <a href="{{ page.previous.url }}"><i class="fa fa-chevron-left"></i>&nbsp;&nbsp;上 • {{ page.previous.title }}</a>
+            <a href="{{ site.baseurl }}{{ page.previous.url }}"><i class="fa fa-chevron-left"></i>&nbsp;&nbsp;上 • {{ page.previous.title }}</a>
             {% else %}
             <a><i class="fa fa-chevron-left"></i>&nbsp;&nbsp;上 • 尽头</a>
             {% endif %}
             {% if page.next %}
-            <a href="{{ page.next.url }}">下 • {{ page.next.title }}&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></a>
+            <a href="{{ site.baseurl }}{{ page.next.url }}">下 • {{ page.next.title }}&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></a>
             {% else %} 
             <a>下 • 尽头&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></a>
             {% endif %}

@@ -4,7 +4,7 @@ layout: default
 ---
 <div class="posttext" style="margin-bottom: 20px;">
     <div class="posttitle">
-        <a href="{{ page.url }}"><i class="fa fa-tags"></i>&nbsp;&nbsp;标签</a><hr>
+        <a href="{{ site.baseurl }}{{ page.url }}"><i class="fa fa-tags"></i>&nbsp;&nbsp;标签</a><hr>
     </div>
     <div class="tag">
         {% for tag in site.tags %}
@@ -25,7 +25,7 @@ layout: default
             {% for post in tag[1] %}
             <li>
                 <time datetime="{{ post.date }}">{{ post.date | date:"%Y 年 %m 月" }}</time>&nbsp;&nbsp;
-                <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
             </li>
             {% endfor %}
         </ul>
