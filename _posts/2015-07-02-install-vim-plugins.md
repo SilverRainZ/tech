@@ -1,21 +1,26 @@
 ---
 layout: post
 tags: Vim Linux
-path: /assets/2015-7-2-install-vim-plugins
 title: Vim 插件折腾记录
 ---
 
-今天考完计组, 有一个空闲的下午, 于是决定来配一配 vim, 装了几个插件, 记录如下: 
- 
-首先我把本来 `.vimrc` 里所有对于 Windows 的特殊配置都删除了, 反正现在也不怎么用 Windows, 同时维护兼容两个平台的配置文件实在是麻烦.
+* Index
+{:toc}
 
-## fcitx.vim 
-这个是依云写的插件, 用来在普通模式关闭输入法, 插入模式自动恢复上次的输入法状态. (当然你用的得是 fctix.vim )
+今天考完计组, 有一个空闲的下午, 于是决定来配一配 vim, 装了几个插件, 记录如下:
+
+首先我把本来 `.vimrc` 里所有对于 Windows 的特殊配置都删除了, 反正现在也不怎么用 Windows,
+同时维护兼容两个平台的配置文件实在是麻烦.
+
+## fcitx.vim
+
+这个是依云写的插件, 用来在普通模式关闭输入法, 插入模式自动恢复上次的输入法状态.
+(当然你用的得是 fctix)
 
 从这里可以下载: [fcitx.vim](http://www.vim.org/scripts/script.php?script_id=3764).
 
-这个插件的安装很容易, 最简单的方式是直接把 `so/fctix.vim` 放到 `.vim/plugin` 目录下就好,
-最好在 `.vimrc` 里加上一句: `set ttimeoutlen=100`
+这个插件的安装很容易, 最简单的方式是直接把 `so/fctix.vim`
+放到 `.vim/plugin` 目录下就好, 最好在 `.vimrc` 里加上一句: `set ttimeoutlen=100`
 
 如果想要启用 Python 支持的话, 要加入一个环境变量:
 
@@ -25,8 +30,11 @@ export FCITX_SOCKET=/tmp/fcitx-remote.sock
 
 不过我试了试发现报错: socket connection error, 就不去用它了.
 
-##Vundle
-神器, 用来管理插件的插件, 可以从 GitHub, 其他 Git 服务器或者本地的 Git 目录获取并安装插件, 把 [gmarik/Vundle.vim](https://github.com/gmarik/Vundle.vim) clone 到 `.vim` 下, 在 `.vimrc` 里添加如下内容:
+## Vundle
+
+神器, 用来管理插件的插件, 可以从 GitHub, 其他 Git 服务器或者本地的 Git 目录获取并安装插件,
+把 [gmarik/Vundle.vim](https://github.com/gmarik/Vundle.vim) clone 到 `.vim` 下,
+在 `.vimrc` 里添加如下内容:
 
 ```vim
 set nocompatible              " be iMproved, required
@@ -61,54 +69,62 @@ filetype plugin indent on    " required
 那一句之后添加 `Plugin '插件地址'` 再 `:PluginInstall` 一下就好了.
 对于在 GitHub 上的插件地址, 可以直接写 `owner/repo-name` 这样的形式.
 
-##PowerLine
+## PowerLine
+
 漂亮的状态栏插件
 
-在`.vimrc` 相应位置里加一句 `Plugin 'Lokaltog/vim-powerline'`, 再 `:PluginInstall`, 加上如下配置:
+在`.vimrc` 相应位置里加一句 `Plugin 'Lokaltog/vim-powerline'`,
+再 `:PluginInstall`, 加上如下配置:
 
 ```vim
 " powerline
 set nocompatible    " 不兼容 vi
 set t_Co=256        " 终端颜色
 set laststatus=2    " 显示状态栏
-set encoding=utf8   
-let g:Powerline_symbols = 'compatible'  
+set encoding=utf8
+let g:Powerline_symbols = 'compatible'
 " 值为'fancy'的话,状态栏会有好看的箭头, 但是要打过补丁的字体, 太麻烦了
 ```
 
-##Nerdtree
+
+## Nerdtree
+
 文件浏览插件, 还是用 Vundle 安装.
 
 ```vim
-" A tree explorer plugin for vim. 
+" A tree explorer plugin for vim.
 Plugin 'scrooloose/nerdtree'
-" nerdtree 
+" nerdtree
 map <C-n> :NERDTreeToggle<CR>
 ```
 
-##YouCompleteMe
+
+## YouCompleteMe
+
 据说是最好的 C/C++ 补全插件? 这个安装略波折.
 首先用 Vundle 安装:
 
 ```vim
-" A code-completion engine for Vim 
+" A code-completion engine for Vim
 Plugin 'Valloric/YouCompleteMe'
 ```
 
 安装时提示 `YouCompleteMe unavailable: requires Vim compiled with Python 2.x support.`
 
-即我这个版本的 vim 编译时没有 Python 2 的支持, 可以用 `vim --version` 查看是否开启, 
+即我这个版本的 vim 编译时没有 Python 2 的支持, 可以用 `vim --version` 查看是否开启,
 没有开启的话会有 `-python` 这一项.
 
-openSUSE 默认源里的 vim 是没有编译入 Python 2 支持的, 所以得手动编译.(后来知道在 `editor` 源里有vim)
+openSUSE 默认源里的 vim 是没有编译入 Python 2 支持的, 所以得手动编译.
+(后来知道在 `editor` 源里有vim)
 
-首先从 [vim-7.4.tar.bz2](ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2) 下载 vim 7.4 的源码, 解压.
+首先从 [vim-7.4.tar.bz2](ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2)
+下载 vim 7.4 的源码, 解压.
 
-删除原来的 vim 
+删除原来的 vim
 
 ```bash
 ➜  ~  zypper rm gvim
-➜  ~  zypper rm vim 
+➜  ~  zypper rm vim
 ```
 
 先安装各种依赖包:
@@ -152,4 +168,4 @@ openSUSE 默认源里的 vim 是没有编译入 Python 2 支持的, 所以得手
 安装完成.
 
 截图一张:
-<img src="{{ page.path }}/1.png" width=100%>
+！[](/assets/img/vim-plugin-screenshot.png){: width="100%"}
