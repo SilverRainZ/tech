@@ -29,7 +29,7 @@ layout: default
             {% endif %}
             <li>
             <time datetime="{{ post.date }}">{{ post.date | date:"%m 月 %d 日" }}</time>
-            <a href="{{ site.baseurl }}/{{ post.url }}" title="{{ post.title }}">&nbsp;&nbsp;{{ post.title }}</a>
+            <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">&nbsp;&nbsp;{{ post.title }}</a>
             </li>
             {% endfor %}
         </ul>
