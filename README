@@ -1,7 +1,5 @@
-lastavenger.github.io
----------------------
-
-LastAvengers' Blog: http://lastavenger.github.io/
+LastAvengers' tech blog
+-----------------------
 
 If you want to use this template, remember to remove all files in  `_posts` and
 clear up `_includes/blog-stat` and `_includes/commandbox`.
