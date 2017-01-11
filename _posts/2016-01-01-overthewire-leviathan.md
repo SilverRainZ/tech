@@ -7,7 +7,7 @@ tags: CTF
 
 说实话题目不难，可是从开始做题到做完的时间跨度却有一个多月，人家 rr 却做了一会儿就搞定了，我都在干嘛呢？
 
-完整的笔记在 [这里](https://github.com/LastAvenger/no-silver-bullet/blob/master/ctf/wargame-leviathan/wargame-leviathan.md)，
+完整的笔记在 [这里](https://github.com/SilverRainZ/no-silver-bullet/blob/master/ctf/wargame-leviathan/wargame-leviathan.md)，
 其中有点意思的是 leviathan3，所以特地摘抄出来：
 
 登入机器后发现家目录有个带 `suid` 权限的可执行文件 `printfile`，属主是 `leviathan3`，用户组是 `leviathan2`，带 `suid` 的程序执行时可以获得和 owner/grouper 相同的权限（euid/egid）。

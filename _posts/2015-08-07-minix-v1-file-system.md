@@ -26,7 +26,7 @@ Minix FS 结构简单, 易于理解, 并且资料相当丰富.
 Minix 则不同了, 作为曾经流行过的文件系统, 在 Linux 上至今都有方便的 mkfs.minix
 和 fsck.minix 工具, 前者可以建立一个 Minix 文件系统, 后者检查该文件系统的正确性.
 正因如此, 我在 xv6 的代码的基础上修改了代码, 在
-[OS67](https://github.com/LastAvenger/OS67) 上实现了一个精简版的 Minix FS.
+[OS67](https://github.com/SilverRainZ/OS67) 上实现了一个精简版的 Minix FS.
 
 
 ## 建立磁盘

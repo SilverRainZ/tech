@@ -19,7 +19,7 @@ tags: Linux C Makefile ArchLinux
 > 2016-08-10: 经 盖子 提醒，make 本来就不适合做这种事情，于是才有了 autotools
 > 这「更好」的构建工具。
 
-最近在写 [Srain](https://github.com/LastAvenger/srain) 的时候，
+最近在写 [Srain](https://github.com/SilverRainZ/srain) 的时候，
 算是摸索出了对于 `make install` 的比较正确的写法：
 
 首先，对于项目生成产物只是单个可执行文件的情况下，直接在 install 目标里写
@@ -182,7 +182,7 @@ gchar *get_pixmap_path(const gchar *filename){
 可能对系统造成破坏，直接安装也不利于打包，正确的做法是，由 `make install` 
 得到程序所有文件的列表和路径，再由包管理器把这些文件和路径存为软件包，
 安装的时候根据路径把文件放到应该放的位置（这大概就是 Staged Install？）。
-（这里感谢青蛙老师 hexchain 的指导）
+（这里感谢青蛙老师 {% include person name="hexchain" url = "https://hexchain.org/" %} 的指导）
 
 变量 `DESTDIR`[^destdir] 就是用来实现 Staged Install 的，把之前的 `make install` 改成这样：
 

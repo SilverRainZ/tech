@@ -9,14 +9,14 @@ tags: Python
 
 所以后来就把配置文件托管到了GitCafe, 后来因为用不惯 GitCafe 的 web 界面,
 还是在把配置文件放在 GitHub 上了:
-[https://github.com/LastAvenger/dotfiles](https://github.com/LastAvenger/dotfiles)
+[https://github.com/SilverRainZ/dotfiles](https://github.com/SilverRainZ/dotfiles)
 (不过还是觉得更新这些配置文件的 Commit 太影响我的 ContributionsCalendar 了)
 
 即使托管到 Github, 每次把文件拉下来都要复制到相应的位置上去, 依然麻烦,
 所以就打算写个脚本来帮忙, 但是我并不会任何一门脚本
 (Batch和Shell这些不跨平台的就算了...写起来又麻烦), 所以就现学现卖用 Python 试一试,
 花了一个晚上, 写了个100来行的小脚本(有够慢的).
-[https://github.com/LastAvenger/dotfiles/blob/master/sync.py](https://github.com/LastAvenger/dotfiles/blob/master/sync.py)
+[https://github.com/SilverRainZ/dotfiles/blob/master/sync.py](https://github.com/SilverRainZ/dotfiles/blob/master/sync.py)
 
 ## 脚本
 

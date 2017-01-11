@@ -1,4 +1,4 @@
-baseurl: 
+baseurl:
 gems: [jekyll-paginate]
 paginate: 10
 paginate_path: "page:num"
@@ -7,6 +7,6 @@ markdown: kramdown
 kramdown:
     input: GFM
 name: LA
-description:  No Silver Bullet.
-url: tech.lastavengers.me
+description: 明天又将是崩坏的日常。
+url: tech.silverrainz.me
 avatar: https://secure.gravatar.com/avatar/f122d4b03bb7c1e7fd3d89a92a6f2ea9

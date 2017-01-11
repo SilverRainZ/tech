@@ -5,6 +5,10 @@ id: changelog
 icon: fa-history
 ---
 
+> 2017-01
+
+- 域名变更为 [silverrainz.me](http://silverrainz.me) ，博客地址亦变更为 [tech.silverrainz.me](http://tech.silverrainz.me)
+
 
 > 2016-08
 

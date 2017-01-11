@@ -9,7 +9,7 @@ tags: Teeworlds Python
 有人进服务器是给个提示，bot 不难做，倒是对如何获取游戏信息没什么思路。
 
 一开始智商下线地想要在每个客户端套一个脚本，然后由脚本向 bot 报告自己的信息……
-于是搞出来这么个东西：[teebot-nogood](https://github.com/LastAvenger/teebot-nogood)，
+于是搞出来这么个东西：[teebot-nogood](https://github.com/SilverRainZ/teebot-nogood)，
 但是在每个人的客户端上都运行这个脚本一点都不现实，
 最后我在 teeworlds 的论坛找到了[这个帖子](https://www.teeworlds.com/forum/viewtopic.php?id=7737)。
 
@@ -59,5 +59,5 @@ for i in range(0, cur_player_num):
 从上面的代码就可以看出数据的形式了，没有什么好说的地方，仅仅是想用中文记录下来，
 或许以后有人会需要吧。
 
-上面的代码被我整合进了 [LastAvenger/teebot](https://github.com/LastAvenger/teebot) 里，
+上面的代码被我整合进了 [SilverRainZ/teebot](https://github.com/SilverRainZ/teebot) 里，
 如果你在 #archlinux-cn 频道的话，输入 `.tee` 就能知道现在社区的游戏服务器里有几个人啦。

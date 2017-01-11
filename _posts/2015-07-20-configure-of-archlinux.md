@@ -144,4 +144,4 @@ export XMODIFIERS="@im=fcitx"
 
 上面有提到的全部配置文件参见:
 
-[LastAvenger/dotfiles - Github](https://github.com/LastAvenger/dotfiles)
+[SilverRainZ/dotfiles - Github](https://github.com/SilverRainZ/dotfiles)
