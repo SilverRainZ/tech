@@ -7,6 +7,12 @@
 <link rel="shortcut icon" href="{{ site.avatar }}">
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/font-awesome/css/font-awesome.min.css">
 <script src="{{ site.baseurl }}/assets/script.js"></script>
+<script>
+var host = "{{ site.domain }}";
+    if ((host == window.location.host)
+        && (window.location.protocol != "https:"))
+    window.location.protocol = "https";
+</script>
 
 <title>{{ page.title }} | {{ site.name }} </title>
 </head>
