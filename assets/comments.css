@@ -1,0 +1,21 @@
+#isso-thread {
+    color: #333;
+    padding:8px;
+    margin: 8px;
+}
+
+#isso-thread .auth-section .input-wrapper {
+    margin-right: 4px;
+}
+
+#isso-thread .auth-section .post-action input {
+    border-style: none;
+    padding: 5px 20px;
+    color: #DDD;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#isso-thread .post-action input:hover {
+    color: #FFF;
+    background: rgba(255, 255, 255, 0.4);
+}

@@ -1,0 +1,8 @@
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/comments.css">
+
+<script data-isso="//comments.silverrainz.me/"
+        src="//comments.silverrainz.me/js/embed.min.js"></script>
+
+<section id="isso-thread"
+         data-title="{{ page.title }}"
+         data-isso-id="{{ page.id }}"></section>
