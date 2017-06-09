@@ -1,7 +1,10 @@
 #isso-thread {
-    color: #333;
     padding:8px;
     margin: 8px;
+}
+
+#isso-thread .isso-postbox {
+    color: #333;
 }
 
 #isso-thread .auth-section .input-wrapper {
