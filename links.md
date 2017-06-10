@@ -1,7 +1,7 @@
 ---
 title: 链接
 layout: page
-id: links
+id: /links
 icon: fa-link
 ---
 {% include link name="夏殇" link="http://xiashang.sinaapp.com/" desc="大黑客白总." %}

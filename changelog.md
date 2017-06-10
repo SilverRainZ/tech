@@ -1,7 +1,7 @@
 ---
 title: 变更
 layout: page
-id: changelog
+id: /changelog
 icon: fa-history
 ---
 
