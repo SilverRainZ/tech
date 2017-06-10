@@ -22,3 +22,12 @@
     color: #FFF;
     background: rgba(255, 255, 255, 0.4);
 }
+
+#isso-thread .isso-comment a:hover {
+    color: #FFF !important;
+}
+
+#isso-thread .isso-comment .isso-comment-header .author {
+    color: #DDD;
+    font-size: larger;
+}
