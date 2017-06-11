@@ -181,7 +181,7 @@ Let's Encrypt 访问你的网站上的随机验证文件完成，如果你使用
 
 ```ini
 rsa-key-size = 4096
-domains = vps.silverrainz.me
+domains = comments.silverrainz.me
 email = <e-mail address>
 authenticator = nginx
 ```
@@ -199,20 +199,20 @@ certbot 的更多用法见：[User Guide](https://certbot.eff.org/docs/using.htm
 
 ```
 IMPORTANT NOTES:
- - Congratulations! Your certificate and chain have been saved at /etc/letsencrypt/live/vps.silverrainz.me/fullchain.pem.
+ - Congratulations! Your certificate and chain have been saved at /etc/letsencrypt/live/comments.silverrainz.me/fullchain.pem.
  - ...
 ```
 
-获得证书后，修改 nginx 中 `vps.silverrainz.me` 的 server blcok：
+获得证书后，修改 nginx 中 `comments.silverrainz.me` 的 server blcok：
 
 ```nginx
 server {
     listen 443 ssl http2;
     listen [::]:443 ssl http2;
 
-    ssl_certificate /etc/letsencrypt/live/vps.silverrainz.me/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/vps.silverrainz.me/privkey.pem;
-    ssl_trusted_certificate /etc/letsencrypt/live/vps.silverrainz.me/chain.pem;
+    ssl_certificate /etc/letsencrypt/live/comments.silverrainz.me/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/comments.silverrainz.me/privkey.pem;
+    ssl_trusted_certificate /etc/letsencrypt/live/comments.silverrainz.me/chain.pem;
     ssl_session_timeout 1d;
     ssl_session_cache shared:SSL:50m;
     ssl_session_tickets off;
