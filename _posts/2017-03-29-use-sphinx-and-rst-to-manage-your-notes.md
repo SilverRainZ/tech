@@ -1,7 +1,7 @@
 ---
 title: 用 Sphinx + reStructuredText 构建笔记系统
 layout: post
-tags: Sphinx reStructuredText
+tags: Sphinx reStructuredText Sites
 ---
 
 前几天把个人笔记从 GitBook 迁移到了 Sphinx 上，并在 [Read The Docs](http://readthedocs.io/)
