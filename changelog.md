@@ -4,6 +4,10 @@ layout: page
 id: /changelog
 icon: fa-history
 ---
+> 2017-06
+
+多说停止服务，评论系统切换到 Isso，之前的评论数据已迁移。参见文章：
+[从多说迁移到 Isso](https://tech.silverrainz.me/2017/06/10/switch-from-duoshuo-to-isso.html)。
 
 > 2017-04
 
@@ -13,7 +17,8 @@ icon: fa-history
 > 2017-03
 
 将个人笔记 [notes.silverrainz.me](http://notes.silverrainz.me) 从 Gitbook 迁移到
-Sphinx，托管于 [Read The Docs](http://readthedocs.io/)。
+Sphinx，托管于 [Read The Docs](http://readthedocs.io/)，参见文章：
+[用 Sphinx + reStructuredText 构建笔记系统](https://tech.silverrainz.me/2017/03/29/use-sphinx-and-rst-to-manage-your-notes.html)。
 
 
 > 2017-01
