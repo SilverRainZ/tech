@@ -1,5 +1,4 @@
 baseurl:
-gems: [jekyll-paginate]
 paginate: 10
 paginate_path: "page:num"
 encoding: utf-8
@@ -10,3 +9,5 @@ name: LA
 description: 明天又将是崩坏的日常。
 domain: tech.silverrainz.me
 avatar: https://secure.gravatar.com/avatar/f122d4b03bb7c1e7fd3d89a92a6f2ea9
+plugins:
+    - jekyll-paginate
