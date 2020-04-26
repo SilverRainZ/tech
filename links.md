@@ -27,3 +27,5 @@ icon: fa-link
 {% include link name="frantic1048" link="http://frantic1048.logdown.com/" desc="会画画的萌萌的前端高手智乃." %}
 
 {% include link name="VOID001" link="https://void-shana.moe" desc="正在努力做 Kernel 毕设的夏娜菊苣." %}
+
+{% include link name="Beval" link="http://beval.xyz/" desc="Powered by Linux 的医生，~~Arch Linux CN 群医~~，不知道啥时候有机会一起喝酒" %}
