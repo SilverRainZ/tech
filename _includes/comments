@@ -1,8 +1,7 @@
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/comments.css">
-
-<script data-isso="//comments.silverrainz.me/"
-        src="//comments.silverrainz.me/js/embed.min.js"></script>
-
-<section id="isso-thread"
-         data-title="{{ page.title }}"
-         data-isso-id="{{ page.id }}"></section>
+<div class="posttext">
+<hr>
+<p><big>
+Comment box 兴歇消长琐事多，邮件才是永恒的沟通方式。
+如果你有不得不说的话，请到<a href="https://silverrainz.me">我的主页</a>发邮件给我吧。
+</big></p>
+</div>
