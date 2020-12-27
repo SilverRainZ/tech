@@ -7,8 +7,8 @@ tags: Python Sphinx
 近半年发生了非常大的事情，死去又活来，居然也因祸得福，捡到了几个月的疗养时间。
 在这段时间里我慢慢把自己理想中的 PIM 系统架设起来。
 
-2017 年我用 [Sphinx 管理我的笔记](/2017/03/29/gsoc-2016.html)，结果建完便开始荒废，
-那时候英语非常差，即使把 Sphinx 文档读下来也不明所以，用不好应该也是理所当然吧。
+2017 年我用 [Sphinx 管理我的笔记](/2017/03/29/use-sphinx-and-rst-to-manage-your-notes.html)，
+结果建完便开始荒废，那时候英语非常差，即使把 Sphinx 文档读下来也不明所以，用不好应该也是理所当然吧。
 
 5 月的时候，我已经建好了 SilverRainZ/bullet 仓库准备再试试 Sphinx，
 之后学画需要记大量的笔记，将他们电子化也是一个强大的驱动力。
@@ -31,5 +31,5 @@ sidebar，ablog 引入的博客侧边栏并不会影响其他的文档。
 
 文章没有用，本着不做 breaking change 的原则，还是迁移过去了，所以有了这篇没有人看的通知。
 
-地址 tech.silverrainz.me 之后会 redirect 到 silverrainz.me/blog/index.html ，
-silverrainz.me 最近几年都会持有。
+最重要的，新的博客地址是 [silverrainz.me/blog/](https://silverrainz.me/blog/) , 
+tech.silverrainz.me 之后会 redirect 到新地址。
