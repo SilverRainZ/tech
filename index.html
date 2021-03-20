@@ -2,6 +2,14 @@
 title: No Silver Bullet 
 layout: default
 ---
+
+<script>
+var url = "https://silverrainz.me/blog";
+if (confirm("本站已迁移到 " + url + " ，是否跳转？")) {
+    window.location.replace(url);
+}
+</script>
+
 {% for post in paginator.posts %}
 <div class="post">
     <div class="posttext">
